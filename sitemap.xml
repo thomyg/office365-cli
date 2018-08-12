@@ -1,813 +1,863 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-     <loc>/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/user-guide/installing-cli/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/user-guide/using-cli/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/user-guide/connecting-office-365/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/user-guide/cli-output-mode/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/connect/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/disconnect/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/status/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/app/app-add/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/app/app-deploy/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/app/app-get/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/app/app-install/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/app/app-list/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/app/app-remove/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/app/app-retract/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/app/app-uninstall/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/app/app-upgrade/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/cdn/cdn-get/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/cdn/cdn-origin-add/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/cdn/cdn-origin-list/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/cdn/cdn-origin-remove/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/cdn/cdn-policy-list/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/cdn/cdn-policy-set/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/cdn/cdn-set/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/customaction/customaction-add/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/customaction/customaction-clear/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/customaction/customaction-get/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/customaction/customaction-list/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/customaction/customaction-remove/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/customaction/customaction-set/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/externaluser/externaluser-list/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/file/file-checkin/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/file/file-checkout/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/file/file-copy/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/file/file-get/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/file/file-list/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/file/file-remove/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/folder/folder-add/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/folder/folder-copy/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/folder/folder-get/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/folder/folder-list/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/folder/folder-remove/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/folder/folder-rename/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/hidedefaultthemes/hidedefaultthemes-get/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/hidedefaultthemes/hidedefaultthemes-set/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/hubsite/hubsite-connect/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/hubsite/hubsite-data-get/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/hubsite/hubsite-disconnect/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/hubsite/hubsite-get/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/hubsite/hubsite-list/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/hubsite/hubsite-register/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/hubsite/hubsite-rights-grant/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/hubsite/hubsite-rights-revoke/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/hubsite/hubsite-set/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/hubsite/hubsite-theme-sync/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/hubsite/hubsite-unregister/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/list/list-add/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/list/list-get/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/list/list-list/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/list/list-remove/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/list/list-set/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/listitem/listitem-add/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/listitem/listitem-get/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/listitem/listitem-remove/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/listitem/listitem-set/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/page/page-add/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/page/page-control-get/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/page/page-control-list/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/page/page-get/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/page/page-list/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/page/page-set/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/propertybag/propertybag-get/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/propertybag/propertybag-list/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/propertybag/propertybag-remove/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/propertybag/propertybag-set/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/serviceprincipal/serviceprincipal-grant-list/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/serviceprincipal/serviceprincipal-grant-revoke/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/serviceprincipal/serviceprincipal-permissionrequest-approve/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/serviceprincipal/serviceprincipal-permissionrequest-deny/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/serviceprincipal/serviceprincipal-permissionrequest-list/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/serviceprincipal/serviceprincipal-set/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/site/site-add/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/site/site-get/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/site/site-list/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/site/site-set/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/site/site-appcatalog-add/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/site/site-appcatalog-remove/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/site/site-classic-add/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/site/site-classic-list/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/site/site-classic-set/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/site/site-o365group-set/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/sitedesign/sitedesign-add/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/sitedesign/sitedesign-apply/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/sitedesign/sitedesign-get/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/sitedesign/sitedesign-list/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/sitedesign/sitedesign-remove/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/sitedesign/sitedesign-set/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/sitedesign/sitedesign-rights-grant/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/sitedesign/sitedesign-rights-list/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/sitedesign/sitedesign-rights-revoke/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/sitescript/sitescript-add/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/sitescript/sitescript-get/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/sitescript/sitescript-list/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/sitescript/sitescript-remove/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/sitescript/sitescript-set/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/storageentity/storageentity-get/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/storageentity/storageentity-list/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/storageentity/storageentity-remove/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/storageentity/storageentity-set/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/tenant/tenant-appcatalogurl-get/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/theme/theme-apply/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/theme/theme-get/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/theme/theme-list/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/theme/theme-remove/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/theme/theme-set/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/web/web-add/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/web/web-clientsidewebpart-list/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/web/web-get/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/web/web-list/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spo/web/web-remove/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/spfx/project/project-upgrade/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/graph/connect/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/graph/disconnect/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/graph/status/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/graph/groupsetting/groupsetting-add/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/graph/groupsetting/groupsetting-get/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/graph/groupsetting/groupsetting-list/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/graph/groupsettingtemplate/groupsettingtemplate-get/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/graph/groupsettingtemplate/groupsettingtemplate-list/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/graph/o365group/o365group-add/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/graph/o365group/o365group-get/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/graph/o365group/o365group-list/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/graph/o365group/o365group-remove/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/graph/o365group/o365group-restore/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/graph/o365group/o365group-set/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/graph/siteclassification/siteclassification-get/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/graph/user/user-get/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/graph/user/user-list/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/graph/user/user-sendmail/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/azmgmt/connect/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/azmgmt/disconnect/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/azmgmt/status/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/azmgmt/flow/flow-environment-get/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/azmgmt/flow/flow-environment-list/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/azmgmt/flow/flow-get/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/azmgmt/flow/flow-list/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/aad/connect/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/aad/disconnect/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/aad/status/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/aad/oauth2grant/oauth2grant-add/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/aad/oauth2grant/oauth2grant-list/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/aad/oauth2grant/oauth2grant-remove/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/aad/oauth2grant/oauth2grant-set/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/cmd/aad/sp/sp-get/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/concepts/persisting-connection/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/concepts/authorization-tokens/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/concepts/completion/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/concepts/communicating-o365/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/about/why-cli/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/about/comparison-powershell/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/about/release-notes/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>/about/license/</loc>
-     <lastmod>2018-07-02</lastmod>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>None</loc>
+     <lastmod>2018-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
