@@ -32,11 +32,11 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.3, mkdocs-material-3.0.3">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.0.4">
     
     
       
-        <title>Connecting to Office 365 - Office 365 CLI</title>
+        <title>Logging in to Office 365 - Office 365 CLI</title>
       
     
     
@@ -54,8 +54,8 @@
       <script src="../../assets/javascripts/modernizr.1aa3b519.js"></script>
     
     
-      <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
       
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
       
@@ -98,7 +98,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="../../#connecting-to-office-365" tabindex="1" class="md-skip">
+      <a href="../../#logging-in-to-office-365" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -124,7 +124,7 @@
                 Office 365 CLI
               </span>
               <span class="md-header-nav__topic">
-                Connecting to Office 365
+                Logging in to Office 365
               </span>
             
           
@@ -234,7 +234,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../cmd/spo/connect/" title="Commands" class="md-tabs__link">
+        <a href="../../cmd/spo/login/" title="Commands" class="md-tabs__link">
           Commands
         </a>
       
@@ -387,11 +387,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Connecting to Office 365
+        Logging in to Office 365
       </label>
     
-    <a href="./" title="Connecting to Office 365" class="md-nav__link md-nav__link--active">
-      Connecting to Office 365
+    <a href="./" title="Logging in to Office 365" class="md-nav__link md-nav__link--active">
+      Logging in to Office 365
     </a>
     
       
@@ -413,23 +413,23 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#connect-to-an-office-365-service" title="Connect to an Office 365 service" class="md-nav__link">
-    Connect to an Office 365 service
+  <a href="#log-in-to-an-office-365-service" title="Log in to an Office 365 service" class="md-nav__link">
+    Log in to an Office 365 service
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#connect-using-the-default-device-code-flow" title="Connect using the default device code flow" class="md-nav__link">
-    Connect using the default device code flow
+  <a href="#log-in-using-the-default-device-code-flow" title="Log in using the default device code flow" class="md-nav__link">
+    Log in using the default device code flow
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#connect-using-user-name-and-password" title="Connect using user name and password" class="md-nav__link">
-    Connect using user name and password
+  <a href="#log-in-using-user-name-and-password" title="Log in using user name and password" class="md-nav__link">
+    Log in using user name and password
   </a>
   
 </li>
@@ -440,22 +440,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#check-connection-status" title="Check connection status" class="md-nav__link">
-    Check connection status
+  <a href="#check-login-status" title="Check login status" class="md-nav__link">
+    Check login status
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#disconnect-from-an-office-365-service" title="Disconnect from an Office 365 service" class="md-nav__link">
-    Disconnect from an Office 365 service
+  <a href="#log-out-from-an-office-365-service" title="Log out from an Office 365 service" class="md-nav__link">
+    Log out from an Office 365 service
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#connecting-to-sharepoint-online" title="Connecting to SharePoint Online" class="md-nav__link">
-    Connecting to SharePoint Online
+  <a href="#logging-in-to-sharepoint-online" title="Logging in to SharePoint Online" class="md-nav__link">
+    Logging in to SharePoint Online
   </a>
   
 </li>
@@ -480,8 +480,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#connecting-to-office-365-via-a-proxy" title="Connecting to Office 365 via a proxy" class="md-nav__link">
-    Connecting to Office 365 via a proxy
+  <a href="#logging-in-to-office-365-via-a-proxy" title="Logging in to Office 365 via a proxy" class="md-nav__link">
+    Logging in to Office 365 via a proxy
   </a>
   
 </li>
@@ -565,8 +565,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cmd/spo/connect/" title="connect" class="md-nav__link">
-      connect
+    <a href="../../cmd/spo/login/" title="login" class="md-nav__link">
+      login
     </a>
   </li>
 
@@ -577,8 +577,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cmd/spo/disconnect/" title="disconnect" class="md-nav__link">
-      disconnect
+    <a href="../../cmd/spo/logout/" title="logout" class="md-nav__link">
+      logout
     </a>
   </li>
 
@@ -1550,6 +1550,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/spo/list/list-webhook-list/" title="list webhook list" class="md-nav__link">
+      list webhook list
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -1594,6 +1606,18 @@
   <li class="md-nav__item">
     <a href="../../cmd/spo/listitem/listitem-get/" title="listitem get" class="md-nav__link">
       listitem get
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/spo/listitem/listitem-list/" title="listitem list" class="md-nav__link">
+      listitem list
     </a>
   </li>
 
@@ -1748,6 +1772,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../cmd/spo/page/page-remove/" title="page remove" class="md-nav__link">
+      page remove
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../cmd/spo/page/page-set/" title="page set" class="md-nav__link">
       page set
     </a>
@@ -1762,6 +1798,18 @@
   <li class="md-nav__item">
     <a href="../../cmd/spo/page/page-clientsidewebpart-add/" title="page clientsidewebpart add" class="md-nav__link">
       page clientsidewebpart add
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/spo/page/page-column-get/" title="page column get" class="md-nav__link">
+      page column get
     </a>
   </li>
 
@@ -1798,6 +1846,18 @@
   <li class="md-nav__item">
     <a href="../../cmd/spo/page/page-control-list/" title="page control list" class="md-nav__link">
       page control list
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/spo/page/page-section-add/" title="page section add" class="md-nav__link">
+      page section add
     </a>
   </li>
 
@@ -2110,6 +2170,18 @@
   <li class="md-nav__item">
     <a href="../../cmd/spo/site/site-classic-list/" title="site classic list" class="md-nav__link">
       site classic list
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/spo/site/site-classic-remove/" title="site classic remove" class="md-nav__link">
+      site classic remove
     </a>
   </li>
 
@@ -2462,6 +2534,18 @@
   </li>
 
         
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/spo/tenant/tenant-settings-list/" title="tenant settings list" class="md-nav__link">
+      tenant settings list
+    </a>
+  </li>
+
+        
       </ul>
     </nav>
   </li>
@@ -2477,10 +2561,58 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1-25" type="checkbox" id="nav-3-1-25">
     
     <label class="md-nav__link" for="nav-3-1-25">
-      theme
+      term
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
       <label class="md-nav__title" for="nav-3-1-25">
+        term
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/spo/term/term-group-get/" title="term group get" class="md-nav__link">
+      term group get
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/spo/term/term-group-list/" title="term group list" class="md-nav__link">
+      term group list
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1-26" type="checkbox" id="nav-3-1-26">
+    
+    <label class="md-nav__link" for="nav-3-1-26">
+      theme
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-1-26">
         theme
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2558,13 +2690,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1-26" type="checkbox" id="nav-3-1-26">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-1-27" type="checkbox" id="nav-3-1-27">
     
-    <label class="md-nav__link" for="nav-3-1-26">
+    <label class="md-nav__link" for="nav-3-1-27">
       web
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="3">
-      <label class="md-nav__title" for="nav-3-1-26">
+      <label class="md-nav__title" for="nav-3-1-27">
         web
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -2737,8 +2869,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cmd/graph/connect/" title="connect" class="md-nav__link">
-      connect
+    <a href="../../cmd/graph/login/" title="login" class="md-nav__link">
+      login
     </a>
   </li>
 
@@ -2749,8 +2881,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cmd/graph/disconnect/" title="disconnect" class="md-nav__link">
-      disconnect
+    <a href="../../cmd/graph/logout/" title="logout" class="md-nav__link">
+      logout
     </a>
   </li>
 
@@ -2818,6 +2950,30 @@
   <li class="md-nav__item">
     <a href="../../cmd/graph/groupsetting/groupsetting-list/" title="groupsetting list" class="md-nav__link">
       groupsetting list
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/graph/groupsetting/groupsetting-remove/" title="groupsetting remove" class="md-nav__link">
+      groupsetting remove
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/graph/groupsetting/groupsetting-set/" title="groupsetting set" class="md-nav__link">
+      groupsetting set
     </a>
   </li>
 
@@ -3133,8 +3289,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cmd/azmgmt/connect/" title="connect" class="md-nav__link">
-      connect
+    <a href="../../cmd/azmgmt/login/" title="login" class="md-nav__link">
+      login
     </a>
   </li>
 
@@ -3145,8 +3301,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cmd/azmgmt/disconnect/" title="disconnect" class="md-nav__link">
-      disconnect
+    <a href="../../cmd/azmgmt/logout/" title="logout" class="md-nav__link">
+      logout
     </a>
   </li>
 
@@ -3212,6 +3368,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../cmd/azmgmt/flow/flow-export/" title="flow export" class="md-nav__link">
+      flow export
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../cmd/azmgmt/flow/flow-get/" title="flow get" class="md-nav__link">
       flow get
     </a>
@@ -3226,6 +3394,30 @@
   <li class="md-nav__item">
     <a href="../../cmd/azmgmt/flow/flow-list/" title="flow list" class="md-nav__link">
       flow list
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/azmgmt/flow/flow-run-get/" title="flow run get" class="md-nav__link">
+      flow run get
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/azmgmt/flow/flow-run-list/" title="flow run list" class="md-nav__link">
+      flow run list
     </a>
   </li>
 
@@ -3265,8 +3457,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cmd/aad/connect/" title="connect" class="md-nav__link">
-      connect
+    <a href="../../cmd/aad/login/" title="login" class="md-nav__link">
+      login
     </a>
   </li>
 
@@ -3277,8 +3469,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../cmd/aad/disconnect/" title="disconnect" class="md-nav__link">
-      disconnect
+    <a href="../../cmd/aad/logout/" title="logout" class="md-nav__link">
+      logout
     </a>
   </li>
 
@@ -3586,23 +3778,23 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#connect-to-an-office-365-service" title="Connect to an Office 365 service" class="md-nav__link">
-    Connect to an Office 365 service
+  <a href="#log-in-to-an-office-365-service" title="Log in to an Office 365 service" class="md-nav__link">
+    Log in to an Office 365 service
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#connect-using-the-default-device-code-flow" title="Connect using the default device code flow" class="md-nav__link">
-    Connect using the default device code flow
+  <a href="#log-in-using-the-default-device-code-flow" title="Log in using the default device code flow" class="md-nav__link">
+    Log in using the default device code flow
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#connect-using-user-name-and-password" title="Connect using user name and password" class="md-nav__link">
-    Connect using user name and password
+  <a href="#log-in-using-user-name-and-password" title="Log in using user name and password" class="md-nav__link">
+    Log in using user name and password
   </a>
   
 </li>
@@ -3613,22 +3805,22 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#check-connection-status" title="Check connection status" class="md-nav__link">
-    Check connection status
+  <a href="#check-login-status" title="Check login status" class="md-nav__link">
+    Check login status
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#disconnect-from-an-office-365-service" title="Disconnect from an Office 365 service" class="md-nav__link">
-    Disconnect from an Office 365 service
+  <a href="#log-out-from-an-office-365-service" title="Log out from an Office 365 service" class="md-nav__link">
+    Log out from an Office 365 service
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#connecting-to-sharepoint-online" title="Connecting to SharePoint Online" class="md-nav__link">
-    Connecting to SharePoint Online
+  <a href="#logging-in-to-sharepoint-online" title="Logging in to SharePoint Online" class="md-nav__link">
+    Logging in to SharePoint Online
   </a>
   
 </li>
@@ -3653,8 +3845,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#connecting-to-office-365-via-a-proxy" title="Connecting to Office 365 via a proxy" class="md-nav__link">
-    Connecting to Office 365 via a proxy
+  <a href="#logging-in-to-office-365-via-a-proxy" title="Logging in to Office 365 via a proxy" class="md-nav__link">
+    Logging in to Office 365 via a proxy
   </a>
   
 </li>
@@ -3685,94 +3877,94 @@
                   <a href="http://github.com/pnp/office365-cli/blob/master/docs/manual/docs/user-guide/connecting-office-365.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="connecting-to-office-365">Connecting to Office 365<a class="headerlink" href="#connecting-to-office-365" title="Permanent link">&para;</a></h1>
-<p>Before you can use Office 365 CLI commands to manage your tenant, you have to connect to Office 365. Following section explains how you can connect and check the status of the connection to Office 365.</p>
+                <h1 id="logging-in-to-office-365">Logging in to Office 365<a class="headerlink" href="#logging-in-to-office-365" title="Permanent link">&para;</a></h1>
+<p>Before you can use Office 365 CLI commands to manage your tenant, you have to log in to Office 365. Following section explains how you can log in and check the Office 365 login status.</p>
 <h2 id="office-365-services">Office 365 services<a class="headerlink" href="#office-365-services" title="Permanent link">&para;</a></h2>
 <p>Using the Office 365 CLI you can manage different areas of an Office 365 tenant. Currently, commands for working with SharePoint Online, Azure Active Directory, Microsoft Graph and the Azure Management Service are available, but more commands for other services will be added in the future.</p>
-<p>Commands in the Office 365 CLI are organized into services. For example, all commands that manage SharePoint Online begin with <code>spo</code> (<code>spo app list</code>, <code>spo cdn get</code>, etc.) and commands for working with the Azure AD begin with <code>aad</code>. For each Office 365 service, the CLI offers three commands for managing the connection with that service.</p>
-<h3 id="connect-to-an-office-365-service">Connect to an Office 365 service<a class="headerlink" href="#connect-to-an-office-365-service" title="Permanent link">&para;</a></h3>
-<p>Office 365 CLI offers you a number of ways to connect to Office 365 services in your tenant.</p>
-<h4 id="connect-using-the-default-device-code-flow">Connect using the default device code flow<a class="headerlink" href="#connect-using-the-default-device-code-flow" title="Permanent link">&para;</a></h4>
-<p>The default way to connect an Office 365 service using the Office 365 CLI is through the device code flow. To connect to an Office 365 service, use the <code>&lt;service&gt; connect</code> command for that service. For example, to connect to SharePoint Online, execute:</p>
-<div class="codehilite"><pre><span></span>spo connect https://contoso.sharepoint.com
+<p>Commands in the Office 365 CLI are organized into services. For example, all commands that manage SharePoint Online begin with <code>spo</code> (<code>spo app list</code>, <code>spo cdn get</code>, etc.) and commands for working with the Azure AD begin with <code>aad</code>. For each Office 365 service, the CLI offers three commands for managing the login with that service.</p>
+<h3 id="log-in-to-an-office-365-service">Log in to an Office 365 service<a class="headerlink" href="#log-in-to-an-office-365-service" title="Permanent link">&para;</a></h3>
+<p>Office 365 CLI offers you a number of ways to log in to Office 365 services in your tenant.</p>
+<h4 id="log-in-using-the-default-device-code-flow">Log in using the default device code flow<a class="headerlink" href="#log-in-using-the-default-device-code-flow" title="Permanent link">&para;</a></h4>
+<p>The default way to log in to an Office 365 service using the Office 365 CLI is through the device code flow. To log in to an Office 365 service, use the <code>&lt;service&gt; login</code> command for that service. For example, to log in to SharePoint Online, execute:</p>
+<div class="codehilite"><pre><span></span>spo login https://contoso.sharepoint.com
 </pre></div>
 
 
-<p>To connect to Azure AD, which uses a fixed URL, execute:</p>
-<div class="codehilite"><pre><span></span>aad connect
+<p>To log in to Azure AD, which uses a fixed URL, execute:</p>
+<div class="codehilite"><pre><span></span>aad login
 </pre></div>
 
 
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>If the service uses a fixed URL, such as Azure AD or Microsoft Graph, you will execute the <code>connect</code> command without any arguments, for example <code>aad connect</code>. However, when connecting to other services that require a URL, such as SharePoint, you will execute the <code>connect</code> command with the URL to which the CLI should connect to, for example: <code>spo connect https://contoso.sharepoint.com</code>. For more information on connecting to each service, refer to the help of the <code>connect</code> command for that service.</p>
+<p>If the service uses a fixed URL, such as Azure AD or Microsoft Graph, you will execute the <code>login</code> command without any arguments, for example <code>aad login</code>. However, when logging in to other services that require a URL, such as SharePoint, you will execute the <code>login</code> command with the URL to which the CLI should log in to, for example: <code>spo login https://contoso.sharepoint.com</code>. For more information on logging in to each service, refer to the help of the <code>login</code> command for that service.</p>
 </div>
-<p>After executing the <code>connect</code> command, you will be prompted to navigate to <em>https://aka.ms/devicelogin</em> in your web browser and enter the login code presented to you by the Office 365 CLI in the command line. After entering the code, you will see the prompt that you are about to authenticate the <em>PnP Office 365 Management Shell</em> application to access your tenant on your behalf.</p>
+<p>After executing the <code>login</code> command, you will be prompted to navigate to <em>https://aka.ms/devicelogin</em> in your web browser and enter the login code presented to you by the Office 365 CLI in the command line. After entering the code, you will see the prompt that you are about to authenticate the <em>PnP Office 365 Management Shell</em> application to access your tenant on your behalf.</p>
 <p><a href="../../images/login.png"><img alt="Signing in to Azure Active Directory" src="../../images/login.png" /></a></p>
 <p>If you are using the Office 365 CLI for the first time, you will be also prompted to verify the permissions you are about to grant the Office 365 CLI. This is referred to as <em>consent</em>.</p>
 <p><a href="../../images/consent.png"><img alt="Granting the Office 365 CLI the necessary permissions" src="../../images/consent.png" /></a></p>
 <p>The device code flow is the recommended approach for command-line tools to authenticate with resources secured with Azure AD. Because the authentication process is handled in the browser by Azure AD itself, it allows you to benefit of rich security features such as multi-factor authentication or conditional access. The device code flow is interactive and requires user interaction which might be limiting if you want to use the Office 365 CLI in your continuous deployment setup which is fully automated and doesn't involve user interaction.</p>
-<h4 id="connect-using-user-name-and-password">Connect using user name and password<a class="headerlink" href="#connect-using-user-name-and-password" title="Permanent link">&para;</a></h4>
-<p>An alternative way to connect to an Office 365 service in the Office 365 CLI is by using a user name and password. To use this way of authenticating, set the <code>authType</code> option to <code>password</code> and specify your credentials using the <code>userName</code> and <code>password</code> options.</p>
-<p>To connect to SharePoint Online using your user name and password, execute:</p>
-<div class="codehilite"><pre><span></span>spo connect https://contoso.sharepoint.com --authType password --userName user@contoso.com --password pass@word1
+<h4 id="log-in-using-user-name-and-password">Log in using user name and password<a class="headerlink" href="#log-in-using-user-name-and-password" title="Permanent link">&para;</a></h4>
+<p>An alternative way to log in to an Office 365 service in the Office 365 CLI is by using a user name and password. To use this way of authenticating, set the <code>authType</code> option to <code>password</code> and specify your credentials using the <code>userName</code> and <code>password</code> options.</p>
+<p>To log in to SharePoint Online using your user name and password, execute:</p>
+<div class="codehilite"><pre><span></span>spo login https://contoso.sharepoint.com --authType password --userName user@contoso.com --password pass@word1
 </pre></div>
 
 
-<p>To connect to Azure AD using your user name and password, execute:</p>
-<div class="codehilite"><pre><span></span>aad connect --authType password --userName user@contoso.com --password pass@word1
+<p>To log in to Azure AD using your user name and password, execute:</p>
+<div class="codehilite"><pre><span></span>aad login --authType password --userName user@contoso.com --password pass@word1
 </pre></div>
 
 
-<p>Using credentials to connect to Office 365 is convenient in automation scenarios where you cannot authenticate interactively. The downside of this way of authenticating is, that it doesn't allow you to use any of the advanced security features that Azure AD offers. If your account for example uses multi-factor authentication, connecting to Office 365 using credentials will fail.</p>
+<p>Using credentials to log in to Office 365 is convenient in automation scenarios where you cannot authenticate interactively. The downside of this way of authenticating is, that it doesn't allow you to use any of the advanced security features that Azure AD offers. If your account for example uses multi-factor authentication, logging in to Office 365 using credentials will fail.</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>When connecting to Office 365 using credentials, Office 365 CLI will persist not only the retrieved access and refresh token, but also the credentials you specified when connecting. This is necessary for the CLI to be able to retrieve a new refresh token, in case the previously retrieved refresh token expired or has been invalidated.</p>
+<p>When logging in to Office 365 using credentials, Office 365 CLI will persist not only the retrieved access and refresh token, but also the credentials you specified when logging in. This is necessary for the CLI to be able to retrieve a new refresh token, in case the previously retrieved refresh token expired or has been invalidated.</p>
 </div>
 <p>Generally, you should use the default device code flow. If you need to use a non-interactive authentication flow, you can authenticate using credentials of an account that has sufficient privileges in your tenant and doesn't have multi-factor authentication or other advanced security features enabled.</p>
-<h3 id="check-connection-status">Check connection status<a class="headerlink" href="#check-connection-status" title="Permanent link">&para;</a></h3>
-<p>To see if you're connected to the particular Office 365 service and if so, with which account, use the <code>&lt;service&gt; status</code> command, for example, to see if you're connected to SharePoint Online, execute:</p>
+<h3 id="check-login-status">Check login status<a class="headerlink" href="#check-login-status" title="Permanent link">&para;</a></h3>
+<p>To see if you're logged in to the particular Office 365 service and if so, with which account, use the <code>&lt;service&gt; status</code> command, for example, to see if you're logged in to SharePoint Online, execute:</p>
 <div class="codehilite"><pre><span></span>spo status
 </pre></div>
 
 
-<h3 id="disconnect-from-an-office-365-service">Disconnect from an Office 365 service<a class="headerlink" href="#disconnect-from-an-office-365-service" title="Permanent link">&para;</a></h3>
-<p>To disconnect from an Office 365 service, use the <code>&lt;service&gt; disconnect</code> command for that service. For example, to disconnect from SharePoint Online, execute:</p>
-<div class="codehilite"><pre><span></span>spo disconnect
+<h3 id="log-out-from-an-office-365-service">Log out from an Office 365 service<a class="headerlink" href="#log-out-from-an-office-365-service" title="Permanent link">&para;</a></h3>
+<p>To log out from an Office 365 service, use the <code>&lt;service&gt; logout</code> command for that service. For example, to log out from SharePoint Online, execute:</p>
+<div class="codehilite"><pre><span></span>spo <span class="nb">logout</span>
 </pre></div>
 
 
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Each service in the Office 365 CLI manages it connection information independently. This makes it possible for you to be connected to different services with different accounts. Using the <code>&lt;service&gt; status</code> command you can see which account is currently connected to the particular service.</p>
+<p>Each service in the Office 365 CLI manages its login information independently. This makes it possible for you to be logged in to different services with different accounts. Using the <code>&lt;service&gt; status</code> command you can see which account is currently logged in to the particular service.</p>
 </div>
 <script src="https://asciinema.org/a/158294.js" id="asciicast-158294" async></script>
 
-<h3 id="connecting-to-sharepoint-online">Connecting to SharePoint Online<a class="headerlink" href="#connecting-to-sharepoint-online" title="Permanent link">&para;</a></h3>
-<p>When connecting to SharePoint Online, you can connect either to the tenant admin site (eg. <code>https://contoso-admin.sharepoint.com</code>) or any other site in your tenant. If you are connected to the tenant admin site, but would like to get information for some other site, such as the list of its subsites or lists, the CLI will automatically switch to that site, without you having to reconnect.</p>
+<h3 id="logging-in-to-sharepoint-online">Logging in to SharePoint Online<a class="headerlink" href="#logging-in-to-sharepoint-online" title="Permanent link">&para;</a></h3>
+<p>When logging in to SharePoint Online, you can log in either to the tenant admin site (eg. <code>https://contoso-admin.sharepoint.com</code>) or any other site in your tenant. If you are logged in to the tenant admin site, but would like to get information for some other site, such as the list of its subsites or lists, the CLI will automatically switch to that site, without you having to reauthenticate.</p>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
-<p>Please note, that some commands require connection to the tenant admin site, and if you try to execute them, while being connected to a different site, you will get an error. For more information whether the connection to the tenant admin site is required or not, refer to the help of that particular command.</p>
+<p>Please note, that some commands require login to the tenant admin site, and if you try to execute them, while being logged in to a different site, you will get an error. For more information whether the login to the tenant admin site is required or not, refer to the help of that particular command.</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>The most convenient way of working with the CLI is to connect to the tenant admin site. Based on the options you specified when executing commands, the CLI will automatically switch between the tenant admin site or other sites that you will want to manage. You should connect to other sites only, if you don't have tenant admin privileges and yet would like to automate some of your work using the Office 365 CLI.</p>
+<p>The most convenient way of working with the CLI is to log in to the tenant admin site. Based on the options you specified when executing commands, the CLI will automatically switch between the tenant admin site or other sites that you will want to manage. You should log in to other sites only, if you don't have tenant admin privileges and yet would like to automate some of your work using the Office 365 CLI.</p>
 </div>
 <h2 id="authorize-with-office-365">Authorize with Office 365<a class="headerlink" href="#authorize-with-office-365" title="Permanent link">&para;</a></h2>
 <p>To authorize for communicating with Office 365 API, the Office 365 CLI uses the OAuth 2.0 protocol. When using the default device code flow, you authenticate with Azure AD in the web browser. After authenticating, Office 365 CLI will attempt to retrieve a valid access token for the specified Office 365 service. If you have insufficient permissions to access the particular service, authorization will fail with an adequate error.</p>
 <p>If you authenticate using credentials, the authentication and authorization are a part of the same request that Office 365 CLI issues towards Azure AD. If either authentication or authorization fails, you will see a corresponding error message explaining what went wrong.</p>
 <h2 id="re-consent-the-pnp-office-365-management-shell-azure-ad-application">Re-consent the PnP Office 365 Management Shell Azure AD application<a class="headerlink" href="#re-consent-the-pnp-office-365-management-shell-azure-ad-application" title="Permanent link">&para;</a></h2>
-<p>Office 365 CLI uses the <em>PnP Office 365 Management Shell</em> Azure AD application to connect to your Office 365 tenant on your behalf. As we add new commands to the CLI, it's possible, that new permissions will be added to the <em>PnP Office 365 Management Shell</em> Azure AD application. To be able to use the newly added commands which depend on these new permissions, you will have to re-approve the <em>PnP Office 365 Management Shell</em> Azure AD application in your Azure AD. This process is also known as <em>re-consenting the Azure AD application</em>.</p>
+<p>Office 365 CLI uses the <em>PnP Office 365 Management Shell</em> Azure AD application to log in to your Office 365 tenant on your behalf. As we add new commands to the CLI, it's possible, that new permissions will be added to the <em>PnP Office 365 Management Shell</em> Azure AD application. To be able to use the newly added commands which depend on these new permissions, you will have to re-approve the <em>PnP Office 365 Management Shell</em> Azure AD application in your Azure AD. This process is also known as <em>re-consenting the Azure AD application</em>.</p>
 <p>To re-consent the <em>PnP Office 365 Management Shell</em> application in your Azure AD, in the command line execute:</p>
 <div class="codehilite"><pre><span></span>o365 --reconsent
 </pre></div>
 
 
 <p>Office 365 CLI will provide you with a URL that you should open in the web browser and sign in with your organizational account. After authenticating, Azure AD will prompt you to approve the new set of permissions. Once you approved the permissions, you will be redirected to an empty page. You can now use all commands in the Office 365 CLI.</p>
-<h2 id="connecting-to-office-365-via-a-proxy">Connecting to Office 365 via a proxy<a class="headerlink" href="#connecting-to-office-365-via-a-proxy" title="Permanent link">&para;</a></h2>
-<p>All communication between the Office 365 CLI and Office 365 APIs happens via web requests. If you're behind a proxy, you should set up an environment variable to allow Office 365 CLI to connect to Office 365. More information about the necessary configuration steps is available at <a href="https://github.com/request/request#controlling-proxy-behaviour-using-environment-variables">https://github.com/request/request#controlling-proxy-behaviour-using-environment-variables</a>.</p>
+<h2 id="logging-in-to-office-365-via-a-proxy">Logging in to Office 365 via a proxy<a class="headerlink" href="#logging-in-to-office-365-via-a-proxy" title="Permanent link">&para;</a></h2>
+<p>All communication between the Office 365 CLI and Office 365 APIs happens via web requests. If you're behind a proxy, you should set up an environment variable to allow Office 365 CLI to log in to Office 365. More information about the necessary configuration steps is available at <a href="https://github.com/request/request#controlling-proxy-behaviour-using-environment-variables">https://github.com/request/request#controlling-proxy-behaviour-using-environment-variables</a>.</p>
 <h2 id="persisted-connections">Persisted connections<a class="headerlink" href="#persisted-connections" title="Permanent link">&para;</a></h2>
-<p>After connecting to Office 365, the Office 365 CLI will persist that connection information until you explicitly disconnect from the particular service. This is necessary to support building scripts using the Office 365 CLI, where each command is executed independently of other commands. Persisted connection contains information about the user name used to establish the connection, the connected Office 365 service URL, the access token and the refresh token. To secure this information from unprivileged access, it's stored securely in the password store specific to the platform on which you're using the CLI. For more information, see the separate article dedicated to <a href="../../concepts/persisting-connection/">persisting connection information</a> in the Office 365 CLI.</p>
+<p>After logging in to Office 365, the Office 365 CLI will persist that connection information until you explicitly log out from the particular service. This is necessary to support building scripts using the Office 365 CLI, where each command is executed independently of other commands. Persisted connection contains information about the user name used to establish the connection, the connected Office 365 service URL, the access token and the refresh token. To secure this information from unprivileged access, it's stored securely in the password store specific to the platform on which you're using the CLI. For more information, see the separate article dedicated to <a href="../../concepts/persisting-connection/">persisting connection information</a> in the Office 365 CLI.</p>
                 
                   
                 
@@ -3857,7 +4049,7 @@
     
       <script src="../../assets/javascripts/application.583bbe55.js"></script>
       
-      <script>app.initialize({version:"1.0.3",url:{base:"../.."}})</script>
+      <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
     
     
