@@ -1581,6 +1581,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../list/list-webhook-add/" title="list webhook add" class="md-nav__link">
+      list webhook add
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../list/list-webhook-get/" title="list webhook get" class="md-nav__link">
       list webhook get
     </a>
@@ -1907,6 +1919,18 @@
   <li class="md-nav__item">
     <a href="../../page/page-control-list/" title="page control list" class="md-nav__link">
       page control list
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../page/page-header-set/" title="page header set" class="md-nav__link">
+      page header set
     </a>
   </li>
 
@@ -4117,6 +4141,14 @@
 <td>Set to overwrite the existing package file</td>
 </tr>
 <tr>
+<td><code>-s, --scope [scope]</code></td>
+<td>Scope of the app catalog: <code>tenant|sitecollection</code>. Default <code>tenant</code></td>
+</tr>
+<tr>
+<td><code>-u, --appCatalogUrl [appCatalogUrl]</code></td>
+<td>The URL of the app catalog where the solution package will be added. It must be specified when the scope is <code>sitecollection</code></td>
+</tr>
+<tr>
 <td><code>-o, --output [output]</code></td>
 <td>Output type. <code>json|text</code>. Default <code>text</code></td>
 </tr>
@@ -4135,17 +4167,24 @@
 <p>Before using this command, log in to a SharePoint Online site, using the <a href="../../login/">spo login</a> command.</p>
 </div>
 <h2 id="remarks">Remarks<a class="headerlink" href="#remarks" title="Permanent link">&para;</a></h2>
-<p>To add an app to the tenant app catalog, you have to first log in to a SharePoint site using the <a href="../../login/">spo login</a> command, eg. <code>spo login https://contoso.sharepoint.com</code>.</p>
+<p>To add an app to the tenant or site collection app catalog, you have to first log in to a SharePoint site using the <a href="../../login/">spo login</a> command, eg. <code>spo login https://contoso.sharepoint.com</code>.</p>
 <p>When specifying the path to the app package file you can use both relative and absolute paths. Note, that <code>~</code> in the path, will not be resolved and will most likely result in an error.</p>
-<p>If you try to upload a package that already exists in the tenant app catalog without specifying the <code>--overwrite</code> option, the command will fail with an error stating that the specified package already exists.</p>
+<p>When adding an app to the tenant app catalog, it's not necessary to specify the tenant app catalog URL. When the URL is not specified, the CLI will try to resolve the URL itself. Specifying the app catalog URL is required when you want to add the app to a site collection app catalog.</p>
+<p>When specifying site collection app catalog, you can specify the URL either with our without the <em>AppCatalog</em> part, for example <code>https://contoso.sharepoint.com/sites/team-a/AppCatalog</code> or <code>https://contoso.sharepoint.com/sites/team-a</code>. CLI will accept both formats.</p>
+<p>If you try to upload a package that already exists in the app catalog without specifying the <code>--overwrite</code> option, the command will fail with an error stating that the specified package already exists.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <p>Add the <em>spfx.sppkg</em> package to the tenant app catalog</p>
-<div class="codehilite"><pre><span></span>spo app add -p /Users/pnp/spfx/sharepoint/solution/spfx.sppkg
+<div class="codehilite"><pre><span></span>spo app add --filePath /Users/pnp/spfx/sharepoint/solution/spfx.sppkg
 </pre></div>
 
 
 <p>Overwrite the <em>spfx.sppkg</em> package in the tenant app catalog with the newer version</p>
-<div class="codehilite"><pre><span></span>spo app add -p sharepoint/solution/spfx.sppkg --overwrite
+<div class="codehilite"><pre><span></span>spo app add --filePath sharepoint/solution/spfx.sppkg --overwrite
+</pre></div>
+
+
+<p>Add the <em>spfx.sppkg</em> package to the site collection app catalog of site <em>https://contoso.sharepoint.com/sites/site1</em></p>
+<div class="codehilite"><pre><span></span>spo app add --filePath c:<span class="se">\s</span>pfx.sppkg --scope sitecollection --appCatalogUrl https://contoso.sharepoint.com/sites/site1
 </pre></div>
 
 

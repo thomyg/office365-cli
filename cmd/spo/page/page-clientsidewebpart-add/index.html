@@ -1513,6 +1513,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../list/list-webhook-add/" title="list webhook add" class="md-nav__link">
+      list webhook add
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../list/list-webhook-get/" title="list webhook get" class="md-nav__link">
       list webhook get
     </a>
@@ -1900,6 +1912,18 @@
   <li class="md-nav__item">
     <a href="../page-control-list/" title="page control list" class="md-nav__link">
       page control list
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../page-header-set/" title="page header set" class="md-nav__link">
+      page header set
     </a>
   </li>
 
@@ -4112,7 +4136,11 @@
 </tr>
 <tr>
 <td><code>--webPartProperties [webPartProperties]</code></td>
-<td>JSON string with web part properties to set on the web part</td>
+<td>JSON string with web part properties to set on the web part. Specify <code>webPartProperties</code> or <code>webPartData</code> but not both</td>
+</tr>
+<tr>
+<td><code>--webPartData [webPartData]</code></td>
+<td>JSON string with web part data as retrieved from the web part maintenance mode. Specify <code>webPartProperties</code> or <code>webPartData</code> but not both</td>
 </tr>
 <tr>
 <td><code>--section [section]</code></td>
@@ -4172,6 +4200,11 @@
 
 <p>Using Windows command line, add the standard Bing Map web part with the specific properties to a modern page</p>
 <div class="codehilite"><pre><span></span>o365 spo page clientsidewebpart add --webUrl https://contoso.sharepoint.com/sites/a-team --pageName page.aspx --standardWebPart BingMap --webPartProperties <span class="sb">`</span><span class="s2">&quot;{&quot;&quot;Title&quot;&quot;:&quot;&quot;Foo location&quot;&quot;}&quot;</span><span class="sb">`</span>
+</pre></div>
+
+
+<p>Add the standard Image web part with the preconfigured image</p>
+<div class="codehilite"><pre><span></span>spo page clientsidewebpart add --webUrl https://contoso.sharepoint.com/sites/a-team --pageName page.aspx --standardWebPart Image --webPartData <span class="s1">&#39;`{ &quot;dataVersion&quot;: &quot;1.8&quot;, &quot;serverProcessedContent&quot;: {&quot;htmlStrings&quot;:{},&quot;searchablePlainTexts&quot;:{&quot;captionText&quot;:&quot;&quot;},&quot;imageSources&quot;:{&quot;imageSource&quot;:&quot;/sites/team-a/SiteAssets/work-life-balance.png&quot;},&quot;links&quot;:{}}, &quot;properties&quot;: {&quot;imageSourceType&quot;:2,&quot;altText&quot;:&quot;a group of people on a beach&quot;,&quot;overlayText&quot;:&quot;Work life balance&quot;,&quot;fileName&quot;:&quot;48146-OFF12_Justice_01.png&quot;,&quot;siteId&quot;:&quot;27664b85-067d-4be9-a7d7-89b2e804d09f&quot;,&quot;webId&quot;:&quot;a7664b85-067d-4be9-a7d7-89b2e804d09f&quot;,&quot;listId&quot;:&quot;37664b85-067d-4be9-a7d7-89b2e804d09f&quot;,&quot;uniqueId&quot;:&quot;67664b85-067d-4be9-a7d7-89b2e804d09f&quot;,&quot;imgWidth&quot;:650,&quot;imgHeight&quot;:433,&quot;fixAspectRatio&quot;:false,&quot;isOverlayTextEnabled&quot;:true}}`&#39;</span>
 </pre></div>
                 
                   

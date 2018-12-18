@@ -1581,6 +1581,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../list/list-webhook-add/" title="list webhook add" class="md-nav__link">
+      list webhook add
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../list/list-webhook-get/" title="list webhook get" class="md-nav__link">
       list webhook get
     </a>
@@ -1907,6 +1919,18 @@
   <li class="md-nav__item">
     <a href="../../page/page-control-list/" title="page control list" class="md-nav__link">
       page control list
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../page/page-header-set/" title="page header set" class="md-nav__link">
+      page header set
     </a>
   </li>
 
@@ -4089,7 +4113,7 @@
                 
                 
                 <h1 id="spo-app-list">spo app list<a class="headerlink" href="#spo-app-list" title="Permanent link">&para;</a></h1>
-<p>Lists apps from the tenant app catalog</p>
+<p>Lists apps from the specified app catalog</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span>spo app list <span class="o">[</span>options<span class="o">]</span>
 </pre></div>
@@ -4106,7 +4130,15 @@
 <tbody>
 <tr>
 <td><code>--help</code></td>
-<td>output usage information</td>
+<td>Output usage information.</td>
+</tr>
+<tr>
+<td><code>-s, --scope [scope]</code></td>
+<td>Target app catalog. <code>tenant|sitecollection</code>. Default <code>tenant</code></td>
+</tr>
+<tr>
+<td><code>-u, --appCatalogUrl [appCatalogUrl]</code></td>
+<td>URL of the tenant or site app catalog. It must be specified when the scope is <code>sitecollection</code></td>
 </tr>
 <tr>
 <td><code>-o, --output [output]</code></td>
@@ -4127,11 +4159,18 @@
 <p>Before using this command, log in to a SharePoint Online site, using the <a href="../../login/">spo login</a> command.</p>
 </div>
 <h2 id="remarks">Remarks<a class="headerlink" href="#remarks" title="Permanent link">&para;</a></h2>
-<p>To list the apps available in the tenant app catalog, you have to first log in to a SharePoint site using the <a href="../../login/">spo login</a> command, eg. <code>spo login https://contoso.sharepoint.com</code>.</p>
+<p>To list apps from the specified app catalog, you have to first log in to a SharePoint site using the <a href="../../login/">spo login</a> command, eg. <code>spo login https://contoso.sharepoint.com</code>.</p>
+<p>When listing information about apps available in the tenant app catalog, it's not necessary to specify the tenant app catalog URL. When the URL is not specified, the CLI will try to resolve the URL itself. Specifying the app catalog URL is required when you want to list information about apps in a site collection app catalog.</p>
+<p>When specifying site collection app catalog, you can specify the URL either with our without the <em>AppCatalog</em> part, for example <code>https://contoso.sharepoint.com/sites/team-a/AppCatalog</code> or <code>https://contoso.sharepoint.com/sites/team-a</code>. CLI will accept both formats.</p>
 <p>When using the text output type (default), the command lists only the values of the <code>Title</code>, <code>ID</code>, <code>Deployed</code> and <code>AppCatalogVersion</code> properties of the app. When setting the output type to JSON, all available properties are included in the command output.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
-<p>List all apps available in the tenant app catalog</p>
+<p>Return the list of available apps from the tenant app catalog. Show the installed version in the site if applicable.</p>
 <div class="codehilite"><pre><span></span>spo app list
+</pre></div>
+
+
+<p>Return the list of available apps from a site collection app catalog of site <em>https://contoso.sharepoint.com/sites/site1</em>.</p>
+<div class="codehilite"><pre><span></span>spo app list --scope sitecollection --appCatalogUrl https://contoso.sharepoint.com/sites/site1
 </pre></div>
 
 

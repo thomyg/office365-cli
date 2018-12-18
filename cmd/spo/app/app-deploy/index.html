@@ -1581,6 +1581,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../list/list-webhook-add/" title="list webhook add" class="md-nav__link">
+      list webhook add
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../list/list-webhook-get/" title="list webhook get" class="md-nav__link">
       list webhook get
     </a>
@@ -1907,6 +1919,18 @@
   <li class="md-nav__item">
     <a href="../../page/page-control-list/" title="page control list" class="md-nav__link">
       page control list
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../page/page-header-set/" title="page header set" class="md-nav__link">
+      page header set
     </a>
   </li>
 
@@ -4089,7 +4113,7 @@
                 
                 
                 <h1 id="spo-app-deploy">spo app deploy<a class="headerlink" href="#spo-app-deploy" title="Permanent link">&para;</a></h1>
-<p>Deploys the specified app in the tenant app catalog</p>
+<p>Deploys the specified app in the specified app catalog</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span>spo app deploy <span class="o">[</span>options<span class="o">]</span>
 </pre></div>
@@ -4110,19 +4134,23 @@
 </tr>
 <tr>
 <td><code>-i, --id [id]</code></td>
-<td>ID of the app to deploy. Specify the <code>id</code> or the <code>name</code> but not both.</td>
+<td>ID of the app to deploy. Specify the <code>id</code> or the <code>name</code> but not both</td>
 </tr>
 <tr>
 <td><code>-n, --name [name]</code></td>
-<td>Name of the app to deploy. Specify the <code>id</code> or the <code>name</code> but not both.</td>
+<td>Name of the app to deploy. Specify the <code>id</code> or the <code>name</code> but not both</td>
 </tr>
 <tr>
 <td><code>-u, --appCatalogUrl [appCatalogUrl]</code></td>
-<td>(optional) URL of the tenant app catalog site. If not specified, the CLI will try to resolve it automatically</td>
+<td>URL of the tenant or site app catalog. It must be specified when the scope is <code>sitecollection</code></td>
 </tr>
 <tr>
 <td><code>--skipFeatureDeployment</code></td>
 <td>If the app supports tenant-wide deployment, deploy it to the whole tenant</td>
+</tr>
+<tr>
+<td><code>-s, --scope [scope]</code></td>
+<td>Scope of the app catalog: <code>tenant|sitecollection</code>. Default <code>tenant</code></td>
 </tr>
 <tr>
 <td><code>-o, --output [output]</code></td>
@@ -4144,11 +4172,17 @@
 </div>
 <h2 id="remarks">Remarks<a class="headerlink" href="#remarks" title="Permanent link">&para;</a></h2>
 <p>To deploy an app in the tenant app catalog, you have to first log in to a SharePoint site using the <a href="../../login/">spo login</a> command, eg. <code>spo login https://contoso.sharepoint.com</code>.</p>
-<p>If you don't specify the URL of the tenant app catalog site using the <strong>appCatalogUrl</strong> option, the CLI will try to determine its URL automatically. This will be done using SharePoint Search. If the tenant app catalog site hasn't been crawled yet, the CLI will not find it and will prompt you to provide the URL yourself.</p>
+<p>When deploying an app in the tenant app catalog, it's not necessary to specify the tenant app catalog URL. When the URL is not specified, the CLI will try to resolve the URL itself. Specifying the app catalog URL is required when you want to deploy the app in a site collection app catalog.</p>
+<p>When specifying site collection app catalog, you can specify the URL either with our without the <em>AppCatalog</em> part, for example <code>https://contoso.sharepoint.com/sites/team-a/AppCatalog</code> or <code>https://contoso.sharepoint.com/sites/team-a</code>. CLI will accept both formats.</p>
 <p>If the app with the specified ID doesn't exist in the tenant app catalog, the command will fail with an error. Before you can deploy an app, you have to add it to the tenant app catalog first using the <a href="../app-add/">spo app add</a> command.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <p>Deploy the specified app in the tenant app catalog. Try to resolve the URL of the tenant app catalog automatically.</p>
 <div class="codehilite"><pre><span></span>spo app deploy --id 058140e3-0e37-44fc-a1d3-79c487d371a3
+</pre></div>
+
+
+<p>Deploy the specified app in the site collection app catalog of site <em>https://contoso.sharepoint.com/sites/site1</em></p>
+<div class="codehilite"><pre><span></span>spo app deploy --id 058140e3-0e37-44fc-a1d3-79c487d371a3 --scope sitecollection --appCatalogUrl https://contoso.sharepoint.com/sites/site1
 </pre></div>
 
 

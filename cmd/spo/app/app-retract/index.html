@@ -1581,6 +1581,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../list/list-webhook-add/" title="list webhook add" class="md-nav__link">
+      list webhook add
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../list/list-webhook-get/" title="list webhook get" class="md-nav__link">
       list webhook get
     </a>
@@ -1907,6 +1919,18 @@
   <li class="md-nav__item">
     <a href="../../page/page-control-list/" title="page control list" class="md-nav__link">
       page control list
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../page/page-header-set/" title="page header set" class="md-nav__link">
+      page header set
     </a>
   </li>
 
@@ -4144,17 +4168,17 @@
 <p>If the app with the specified ID doesn't exist in the tenant app catalog, the command will fail with an error.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <p>Retract the specified app from the tenant app catalog. Try to resolve the URL of the tenant app catalog automatically. Additionally, will prompt for confirmation before actually retracting the app.</p>
-<div class="codehilite"><pre><span></span>spo app retract -i 058140e3-0e37-44fc-a1d3-79c487d371a3
+<div class="codehilite"><pre><span></span>spo app retract --id 058140e3-0e37-44fc-a1d3-79c487d371a3
 </pre></div>
 
 
 <p>Retract the specified app from the tenant app catalog located at <em>https://contoso.sharepoint.com/sites/apps</em>. Additionally, will prompt for confirmation before actually retracting the app.</p>
-<div class="codehilite"><pre><span></span>spo app retract -i 058140e3-0e37-44fc-a1d3-79c487d371a3 -u https://contoso.sharepoint.com/sites/apps
+<div class="codehilite"><pre><span></span>spo app retract --id 058140e3-0e37-44fc-a1d3-79c487d371a3 --appCatalogUrl https://contoso.sharepoint.com/sites/apps
 </pre></div>
 
 
 <p>Retract the specified app from the tenant app catalog. Try to resolve the URL of the tenant app catalog automatically. Will not prompt for confirmation before retracting the app.</p>
-<div class="codehilite"><pre><span></span>spo app retract -i 058140e3-0e37-44fc-a1d3-79c487d371a3 --confirm
+<div class="codehilite"><pre><span></span>spo app retract --id 058140e3-0e37-44fc-a1d3-79c487d371a3 --confirm
 </pre></div>
 
 
