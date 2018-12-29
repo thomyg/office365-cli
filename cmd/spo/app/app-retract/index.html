@@ -2,7 +2,7 @@
 
 
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="no-js">
   <head>
     
@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.1.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.2.0">
     
     
       
@@ -40,7 +40,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/application.11e41852.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/application.572ca0f0.css">
       
         <link rel="stylesheet" href="../../../../assets/stylesheets/application-palette.22915126.css">
       
@@ -51,7 +51,7 @@
       
     
     
-      <script src="../../../../assets/javascripts/modernizr.20ef595d.js"></script>
+      <script src="../../../../assets/javascripts/modernizr.8c900955.js"></script>
     
     
       
@@ -1221,6 +1221,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../folder/folder-move/" title="folder move" class="md-nav__link">
+      folder move
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../folder/folder-remove/" title="folder remove" class="md-nav__link">
       folder remove
     </a>
@@ -1967,6 +1979,18 @@
   <li class="md-nav__item">
     <a href="../../page/page-section-list/" title="page section list" class="md-nav__link">
       page section list
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../page/page-text-add/" title="page text add" class="md-nav__link">
+      page text add
     </a>
   </li>
 
@@ -4113,7 +4137,7 @@
                 
                 
                 <h1 id="spo-app-retract">spo app retract<a class="headerlink" href="#spo-app-retract" title="Permanent link">&para;</a></h1>
-<p>Retracts the specified app from the tenant app catalog</p>
+<p>Retracts the specified app from the specified app catalog</p>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span>spo app retract <span class="o">[</span>options<span class="o">]</span>
 </pre></div>
@@ -4134,15 +4158,19 @@
 </tr>
 <tr>
 <td><code>-i, --id &lt;id&gt;</code></td>
-<td>ID of the app to retract. Needs to be available in the tenant app catalog.</td>
+<td>ID of the app to retract. Needs to be available in the app catalog.</td>
 </tr>
 <tr>
 <td><code>-u, --appCatalogUrl [appCatalogUrl]</code></td>
-<td>(optional) URL of the tenant app catalog site. If not specified, the CLI will try to resolve it automatically</td>
+<td>URL of the tenant or site collection app catalog. It must be specified when the scope is <code>sitecollection</code></td>
+</tr>
+<tr>
+<td><code>-s, --scope [scope]</code></td>
+<td>Scope of the app catalog: <code>tenant|sitecollection</code>. Default <code>tenant</code></td>
 </tr>
 <tr>
 <td><code>--confirm</code></td>
-<td>Don't prompt for confirming retracting the app from the tenant app catalog</td>
+<td>Don't prompt for confirming retracting the app</td>
 </tr>
 <tr>
 <td><code>-o, --output [output]</code></td>
@@ -4163,9 +4191,10 @@
 <p>Before using this command, log in to a SharePoint Online site, using the <a href="../../login/">spo login</a> command.</p>
 </div>
 <h2 id="remarks">Remarks<a class="headerlink" href="#remarks" title="Permanent link">&para;</a></h2>
-<p>To retract an app from the tenant app catalog, you have to first log in to a SharePoint site using the <a href="../../login/">spo login</a> command, eg. <code>spo login https://contoso.sharepoint.com</code>.</p>
-<p>If you don't specify the URL of the tenant app catalog site using the <strong>appCatalogUrl</strong> option, the CLI will try to determine its URL automatically. This will be done using SharePoint Search. If the tenant app catalog site hasn't been crawled yet, the CLI will not find it and will prompt you to provide the URL yourself.</p>
-<p>If the app with the specified ID doesn't exist in the tenant app catalog, the command will fail with an error.</p>
+<p>To retract an app from the tenant or site colleciton app catalog, you have to first log in to a SharePoint site using the <a href="../../login/">spo login</a> command, eg. <code>spo login https://contoso.sharepoint.com</code>.</p>
+<p>When getting information about an app from the tenant app catalog, it's not necessary to specify the tenant app catalog URL. When the URL is not specified, the CLI will try to resolve the URL itself. Specifying the app catalog URL is required when you want to get information about an app from a site collection app catalog.</p>
+<p>When specifying site collection app catalog, you can specify the URL either with our without the <em>AppCatalog</em> part, for example <code>https://contoso.sharepoint.com/sites/team-a/AppCatalog</code> or <code>https://contoso.sharepoint.com/sites/team-a</code>. CLI will accept both formats.</p>
+<p>If the app with the specified ID doesn't exist in the app catalog, the command will fail with an error.</p>
 <h2 id="examples">Examples<a class="headerlink" href="#examples" title="Permanent link">&para;</a></h2>
 <p>Retract the specified app from the tenant app catalog. Try to resolve the URL of the tenant app catalog automatically. Additionally, will prompt for confirmation before actually retracting the app.</p>
 <div class="codehilite"><pre><span></span>spo app retract --id 058140e3-0e37-44fc-a1d3-79c487d371a3
@@ -4179,6 +4208,11 @@
 
 <p>Retract the specified app from the tenant app catalog. Try to resolve the URL of the tenant app catalog automatically. Will not prompt for confirmation before retracting the app.</p>
 <div class="codehilite"><pre><span></span>spo app retract --id 058140e3-0e37-44fc-a1d3-79c487d371a3 --confirm
+</pre></div>
+
+
+<p>Retract the specified app from a site collection app catalog of site <em>https://contoso.sharepoint.com/sites/site1</em>.</p>
+<div class="codehilite"><pre><span></span>spo app retract --id d95f8c94-67a1-4615-9af8-361ad33be93c --scope sitecollection --appCatalogUrl https://contoso.sharepoint.com/sites/site1
 </pre></div>
 
 
@@ -4268,14 +4302,15 @@
       
     </div>
     
-      <script src="../../../../assets/javascripts/application.9e1f3b71.js"></script>
+      <script src="../../../../assets/javascripts/application.b41f3d20.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../../../.."}})</script>
       
     
     
       
-        <script>!function(e,a,t,n,o,c,i){e.GoogleAnalyticsObject=o,e.ga=e.ga||function(){(e.ga.q=e.ga.q||[]).push(arguments)},e.ga.l=1*new Date,c=a.createElement(t),i=a.getElementsByTagName(t)[0],c.async=1,c.src="https://www.google-analytics.com/analytics.js",i.parentNode.insertBefore(c,i)}(window,document,"script",0,"ga"),ga("create","UA-110480857-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(a){a.host!=document.location.host&&a.addEventListener("click",function(){var e=a.getAttribute("data-md-action")||"follow";ga("send","event","outbound",e,a.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+        <script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-110480857-1","auto"),ga("set","anonymizeIp",!0),ga("send","pageview");var links=document.getElementsByTagName("a");if(Array.prototype.map.call(links,function(a){a.host!=document.location.host&&a.addEventListener("click",function(){var e=a.getAttribute("data-md-action")||"follow";ga("send","event","outbound",e,a.href)})}),document.forms.search){var query=document.forms.search.query;query.addEventListener("blur",function(){if(this.value){var e=document.location.pathname;ga("send","pageview",e+"?q="+this.value)}})}</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
   </body>
