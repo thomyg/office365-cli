@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
     
     
       
@@ -40,9 +40,9 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.572ca0f0.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.982221ab.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css">
       
       
         
@@ -51,7 +51,7 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.962652e9.js"></script>
+      <script src="../../assets/javascripts/modernizr.1f0bcf2b.js"></script>
     
     
       
@@ -67,8 +67,30 @@
     
     
       
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110480857-1"></script>
-<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-110480857-1")</script>
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-110480857-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
     
@@ -128,22 +150,19 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            
-              <span class="md-header-nav__topic">
-                Office 365 CLI
-              </span>
-              <span class="md-header-nav__topic">
-                Installing the CLI
-              </span>
-            
+            <span class="md-header-nav__topic">
+              Office 365 CLI
+            </span>
+            <span class="md-header-nav__topic">
+              Installing the CLI
+            </span>
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -166,7 +185,6 @@
     </div>
   </div>
 </div>
-          
         
       </div>
       
@@ -177,20 +195,18 @@
 
   
 
-
-  <a href="http://github.com/pnp/office365-cli/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      GitHub
+<a href="http://github.com/pnp/office365-cli/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
           </div>
         </div>
       
@@ -306,20 +322,18 @@
 
   
 
-
-  <a href="http://github.com/pnp/office365-cli/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      GitHub
+<a href="http://github.com/pnp/office365-cli/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -1638,6 +1652,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../cmd/spo/list/list-label-get/" title="list label get" class="md-nav__link">
+      list label get
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/spo/list/list-label-set/" title="list label set" class="md-nav__link">
+      list label set
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../cmd/spo/list/list-sitescript-get/" title="list sitescript get" class="md-nav__link">
       list sitescript get
     </a>
@@ -1688,6 +1726,30 @@
   <li class="md-nav__item">
     <a href="../../cmd/spo/list/list-view-set/" title="list view set" class="md-nav__link">
       list view set
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/spo/list/list-view-field-add/" title="list view field add" class="md-nav__link">
+      list view field add
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/spo/list/list-view-field-remove/" title="list view field remove" class="md-nav__link">
+      list view field remove
     </a>
   </li>
 
@@ -2466,6 +2528,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../cmd/spo/site/site-inplacerecordsmanagement-set/" title="site inplacerecordsmanagement set" class="md-nav__link">
+      site inplacerecordsmanagement set
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../cmd/spo/site/site-o365group-set/" title="site o365group set" class="md-nav__link">
       site o365group set
     </a>
@@ -2600,6 +2674,54 @@
   <li class="md-nav__item">
     <a href="../../cmd/spo/sitedesign/sitedesign-rights-revoke/" title="sitedesign rights revoke" class="md-nav__link">
       sitedesign rights revoke
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/spo/sitedesign/sitedesign-run-list/" title="sitedesign run list" class="md-nav__link">
+      sitedesign run list
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/spo/sitedesign/sitedesign-run-status-get/" title="sitedesign run status get" class="md-nav__link">
+      sitedesign run status get
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/spo/sitedesign/sitedesign-task-get/" title="sitedesign task get" class="md-nav__link">
+      sitedesign task get
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/spo/sitedesign/sitedesign-task-list/" title="sitedesign task list" class="md-nav__link">
+      sitedesign task list
     </a>
   </li>
 
@@ -3582,6 +3704,54 @@
 
 
   <li class="md-nav__item">
+    <a href="../../cmd/graph/teams/teams-app-list/" title="teams app list" class="md-nav__link">
+      teams app list
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/graph/teams/teams-app-publish/" title="teams app publish" class="md-nav__link">
+      teams app publish
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/graph/teams/teams-app-remove/" title="teams app remove" class="md-nav__link">
+      teams app remove
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/graph/teams/teams-app-update/" title="teams app update" class="md-nav__link">
+      teams app update
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../cmd/graph/teams/teams-list/" title="teams list" class="md-nav__link">
       teams list
     </a>
@@ -3596,6 +3766,18 @@
   <li class="md-nav__item">
     <a href="../../cmd/graph/teams/teams-channel-add/" title="teams channel add" class="md-nav__link">
       teams channel add
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/graph/teams/teams-channel-list/" title="teams channel list" class="md-nav__link">
+      teams channel list
     </a>
   </li>
 
@@ -3644,6 +3826,30 @@
   <li class="md-nav__item">
     <a href="../../cmd/graph/teams/teams-user-list/" title="teams user list" class="md-nav__link">
       teams user list
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/graph/teams/teams-user-remove/" title="teams user remove" class="md-nav__link">
+      teams user remove
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/graph/teams/teams-user-set/" title="teams user set" class="md-nav__link">
+      teams user set
     </a>
   </li>
 
@@ -4168,8 +4374,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../about/comparison-powershell/" title="Comparison to SharePoint PowerShell" class="md-nav__link">
-      Comparison to SharePoint PowerShell
+    <a href="../../about/comparison-powershell/" title="Comparison to SharePoint and Office 365 PowerShell" class="md-nav__link">
+      Comparison to SharePoint and Office 365 PowerShell
     </a>
   </li>
 
@@ -4427,7 +4633,6 @@
           Material for MkDocs</a>
       </div>
       
-        
   <div class="md-footer-social">
     <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
     
@@ -4439,14 +4644,13 @@
     
   </div>
 
-      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../../assets/javascripts/application.a353778b.js"></script>
+      <script src="../../assets/javascripts/application.d9aa80ab.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       

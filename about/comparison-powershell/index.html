@@ -32,17 +32,17 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-3.3.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.0.2">
     
     
       
-        <title>Comparison to SharePoint PowerShell - Office 365 CLI</title>
+        <title>Comparison to SharePoint and Office 365 PowerShell - Office 365 CLI</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/application.572ca0f0.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/application.982221ab.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.22915126.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/application-palette.224b79ff.css">
       
       
         
@@ -51,7 +51,7 @@
       
     
     
-      <script src="../../assets/javascripts/modernizr.962652e9.js"></script>
+      <script src="../../assets/javascripts/modernizr.1f0bcf2b.js"></script>
     
     
       
@@ -67,8 +67,30 @@
     
     
       
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110480857-1"></script>
-<script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","UA-110480857-1")</script>
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-110480857-1", "auto")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
       
     
     
@@ -107,7 +129,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#comparison-to-sharepoint-powershell" tabindex="1" class="md-skip">
+      <a href="#comparison-to-sharepoint-and-office-365-powershell" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -128,22 +150,19 @@
       <div class="md-flex__cell md-flex__cell--stretch">
         <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
           
-            
-              <span class="md-header-nav__topic">
-                Office 365 CLI
-              </span>
-              <span class="md-header-nav__topic">
-                Comparison to SharePoint PowerShell
-              </span>
-            
+            <span class="md-header-nav__topic">
+              Office 365 CLI
+            </span>
+            <span class="md-header-nav__topic">
+              Comparison to SharePoint and Office 365 PowerShell
+            </span>
           
         </div>
       </div>
       <div class="md-flex__cell md-flex__cell--shrink">
         
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
           
-            <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
-            
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
@@ -166,7 +185,6 @@
     </div>
   </div>
 </div>
-          
         
       </div>
       
@@ -177,20 +195,18 @@
 
   
 
-
-  <a href="http://github.com/pnp/office365-cli/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      GitHub
+<a href="http://github.com/pnp/office365-cli/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
           </div>
         </div>
       
@@ -306,20 +322,18 @@
 
   
 
-
-  <a href="http://github.com/pnp/office365-cli/" title="Go to repository" class="md-source" data-md-source="github">
-    
-      <div class="md-source__icon">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href="#__github" width="24" height="24"></use>
-        </svg>
-      </div>
-    
-    <div class="md-source__repository">
-      GitHub
+<a href="http://github.com/pnp/office365-cli/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
     </div>
-  </a>
-
+  
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -1563,6 +1577,30 @@
 
 
   <li class="md-nav__item">
+    <a href="../../cmd/spo/list/list-label-get/" title="list label get" class="md-nav__link">
+      list label get
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/spo/list/list-label-set/" title="list label set" class="md-nav__link">
+      list label set
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../cmd/spo/list/list-sitescript-get/" title="list sitescript get" class="md-nav__link">
       list sitescript get
     </a>
@@ -1613,6 +1651,30 @@
   <li class="md-nav__item">
     <a href="../../cmd/spo/list/list-view-set/" title="list view set" class="md-nav__link">
       list view set
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/spo/list/list-view-field-add/" title="list view field add" class="md-nav__link">
+      list view field add
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/spo/list/list-view-field-remove/" title="list view field remove" class="md-nav__link">
+      list view field remove
     </a>
   </li>
 
@@ -2391,6 +2453,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../cmd/spo/site/site-inplacerecordsmanagement-set/" title="site inplacerecordsmanagement set" class="md-nav__link">
+      site inplacerecordsmanagement set
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../cmd/spo/site/site-o365group-set/" title="site o365group set" class="md-nav__link">
       site o365group set
     </a>
@@ -2525,6 +2599,54 @@
   <li class="md-nav__item">
     <a href="../../cmd/spo/sitedesign/sitedesign-rights-revoke/" title="sitedesign rights revoke" class="md-nav__link">
       sitedesign rights revoke
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/spo/sitedesign/sitedesign-run-list/" title="sitedesign run list" class="md-nav__link">
+      sitedesign run list
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/spo/sitedesign/sitedesign-run-status-get/" title="sitedesign run status get" class="md-nav__link">
+      sitedesign run status get
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/spo/sitedesign/sitedesign-task-get/" title="sitedesign task get" class="md-nav__link">
+      sitedesign task get
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/spo/sitedesign/sitedesign-task-list/" title="sitedesign task list" class="md-nav__link">
+      sitedesign task list
     </a>
   </li>
 
@@ -3507,6 +3629,54 @@
 
 
   <li class="md-nav__item">
+    <a href="../../cmd/graph/teams/teams-app-list/" title="teams app list" class="md-nav__link">
+      teams app list
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/graph/teams/teams-app-publish/" title="teams app publish" class="md-nav__link">
+      teams app publish
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/graph/teams/teams-app-remove/" title="teams app remove" class="md-nav__link">
+      teams app remove
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/graph/teams/teams-app-update/" title="teams app update" class="md-nav__link">
+      teams app update
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../cmd/graph/teams/teams-list/" title="teams list" class="md-nav__link">
       teams list
     </a>
@@ -3521,6 +3691,18 @@
   <li class="md-nav__item">
     <a href="../../cmd/graph/teams/teams-channel-add/" title="teams channel add" class="md-nav__link">
       teams channel add
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/graph/teams/teams-channel-list/" title="teams channel list" class="md-nav__link">
+      teams channel list
     </a>
   </li>
 
@@ -3569,6 +3751,30 @@
   <li class="md-nav__item">
     <a href="../../cmd/graph/teams/teams-user-list/" title="teams user list" class="md-nav__link">
       teams user list
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/graph/teams/teams-user-remove/" title="teams user remove" class="md-nav__link">
+      teams user remove
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../cmd/graph/teams/teams-user-set/" title="teams user set" class="md-nav__link">
+      teams user set
     </a>
   </li>
 
@@ -4103,8 +4309,8 @@
       
     
     
-    <a href="./" title="Comparison to SharePoint PowerShell" class="md-nav__link md-nav__link--active">
-      Comparison to SharePoint PowerShell
+    <a href="./" title="Comparison to SharePoint and Office 365 PowerShell" class="md-nav__link md-nav__link--active">
+      Comparison to SharePoint and Office 365 PowerShell
     </a>
     
   </li>
@@ -4169,8 +4375,8 @@
                   <a href="http://github.com/pnp/office365-cli/blob/master/docs/manual/docs/about/comparison-powershell.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <h1 id="comparison-to-sharepoint-powershell">Comparison to SharePoint PowerShell<a class="headerlink" href="#comparison-to-sharepoint-powershell" title="Permanent link">&para;</a></h1>
-<p>Following table lists the different Office 365 CLI commands and how they map to SharePoint Online Management Shell and PnP PowerShell cmdlets.</p>
+                <h1 id="comparison-to-sharepoint-and-office-365-powershell">Comparison to SharePoint and Office 365 PowerShell<a class="headerlink" href="#comparison-to-sharepoint-and-office-365-powershell" title="Permanent link">&para;</a></h1>
+<p>Following table lists the different Office 365 CLI commands and how they map to PowerShell cmdlets for SharePoint and Office 365.</p>
 <table>
 <thead>
 <tr>
@@ -4199,6 +4405,11 @@
 <td>Add-SPOSiteDesign</td>
 <td>Microsoft.Online.SharePoint.PowerShell</td>
 <td><a href="../../cmd/spo/sitedesign/sitedesign-add/">spo sitedesign add</a></td>
+</tr>
+<tr>
+<td>Add-SPOSiteDesignTask</td>
+<td>Microsoft.Online.SharePoint.PowerShell</td>
+<td><a href="../../cmd/spo/sitedesign/sitedesign-apply/">spo sitedesign apply</a></td>
 </tr>
 <tr>
 <td>Add-SPOSiteScript</td>
@@ -5101,6 +5312,11 @@
 <td><a href="../../cmd/spo/sitedesign/sitedesign-add/">spo sitedesign add</a></td>
 </tr>
 <tr>
+<td>Add-PnPSiteDesignTask</td>
+<td>SharePointPnPPowerShellOnline</td>
+<td><a href="../../cmd/spo/sitedesign/sitedesign-apply/">spo sitedesign apply</a></td>
+</tr>
+<tr>
 <td>Add-PnPSiteScript</td>
 <td>SharePointPnPPowerShellOnline</td>
 <td><a href="../../cmd/spo/sitescript/sitescript-add/">spo sitescript add</a></td>
@@ -5243,7 +5459,7 @@
 <tr>
 <td>Disable-PnPInPlaceRecordsManagementForSite</td>
 <td>SharePointPnPPowerShellOnline</td>
-<td></td>
+<td><a href="../../cmd/spo/site/site-inplacerecordsmanagement-set/">spo site inplacerecordsmanagement set</a></td>
 </tr>
 <tr>
 <td>Disable-PnPResponsiveUI</td>
@@ -5503,7 +5719,7 @@
 <tr>
 <td>Get-PnPLabel</td>
 <td>SharePointPnPPowerShellOnline</td>
-<td></td>
+<td><a href="../../cmd/spo/list/list-label-get/">spo list label get</a></td>
 </tr>
 <tr>
 <td>Get-PnPList</td>
@@ -5619,6 +5835,21 @@
 <td>Get-PnPSiteDesignRights</td>
 <td>SharePointPnPPowerShellOnline</td>
 <td><a href="../../cmd/spo/sitedesign/sitedesign-rights-list/">spo sitedesign rights list</a></td>
+</tr>
+<tr>
+<td>Get-PnPSiteDesignRun</td>
+<td>SharePointPnPPowerShellOnline</td>
+<td><a href="../../cmd/spo/sitedesign/sitedesign-run-list/">spo sitedesign run list</a></td>
+</tr>
+<tr>
+<td>Get-PnPSiteDesignRunStatus</td>
+<td>SharePointPnPPowerShellOnline</td>
+<td><a href="../../cmd/spo/sitedesign/sitedesign-run-status-get/">spo sitedesign run status get</a></td>
+</tr>
+<tr>
+<td>Get-PnPSiteDesignTask</td>
+<td>SharePointPnPPowerShellOnline</td>
+<td><a href="../../cmd/spo/sitedesign/sitedesign-task-get/">spo sitedesign task get</a>, <a href="../../cmd/spo/sitedesign/sitedesign-task-list/">spo sitedesign task list</a></td>
 </tr>
 <tr>
 <td>Get-PnPSitePolicy</td>
@@ -6458,12 +6689,12 @@
 <tr>
 <td>Set-PnPInPlaceRecordsManagement</td>
 <td>SharePointPnPPowerShellOnline</td>
-<td></td>
+<td><a href="../../cmd/spo/site/site-inplacerecordsmanagement-set/">spo site inplacerecordsmanagement set</a></td>
 </tr>
 <tr>
 <td>Set-PnPLabel</td>
 <td>SharePointPnPPowerShellOnline</td>
-<td></td>
+<td><a href="../../cmd/spo/list/list-label-set/">spo list label set</a></td>
 </tr>
 <tr>
 <td>Set-PnPList</td>
@@ -6700,6 +6931,606 @@
 <td>SharePointPnPPowerShellOnline</td>
 <td><a href="../../cmd/graph/siteclassification/siteclassification-set/">graph siteclassification set</a></td>
 </tr>
+<tr>
+<td>Approve-FlowApprovalRequest</td>
+<td>Microsoft.PowerApps.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Deny-FlowApprovalRequest</td>
+<td>Microsoft.PowerApps.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Disable-Flow</td>
+<td>Microsoft.PowerApps.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Enable-Flow</td>
+<td>Microsoft.PowerApps.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-Flow</td>
+<td>Microsoft.PowerApps.PowerShell</td>
+<td><a href="../../cmd/azmgmt/flow/flow-list/">azmgmt flow list</a>, <a href="../../cmd/azmgmt/flow/flow-get/">azmgmt flow get</a></td>
+</tr>
+<tr>
+<td>Get-FlowApproval</td>
+<td>Microsoft.PowerApps.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-FlowApprovalRequest</td>
+<td>Microsoft.PowerApps.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-FlowEnvironment</td>
+<td>Microsoft.PowerApps.PowerShell</td>
+<td><a href="../../cmd/azmgmt/flow/flow-environment-list/">azmgmt flow environment list</a>, <a href="../../cmd/azmgmt/flow/flow-environment-get/">azmgmt flow environment get</a></td>
+</tr>
+<tr>
+<td>Get-FlowOwnerRole</td>
+<td>Microsoft.PowerApps.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-FlowRun</td>
+<td>Microsoft.PowerApps.PowerShell</td>
+<td><a href="../../cmd/azmgmt/flow/flow-run-list/">azmgmt flow run list</a>, <a href="../../cmd/azmgmt/flow/flow-run-get/">azmgmt flow run get</a></td>
+</tr>
+<tr>
+<td>Get-PowerApp</td>
+<td>Microsoft.PowerApps.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-PowerAppConnection</td>
+<td>Microsoft.PowerApps.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-PowerAppConnectionRoleAssignment</td>
+<td>Microsoft.PowerApps.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-PowerAppConnector</td>
+<td>Microsoft.PowerApps.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-PowerAppConnectorRoleAssignment</td>
+<td>Microsoft.PowerApps.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-PowerAppEnvironment</td>
+<td>Microsoft.PowerApps.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-PowerAppRoleAssignment</td>
+<td>Microsoft.PowerApps.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-PowerAppsNotification</td>
+<td>Microsoft.PowerApps.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-PowerAppVersion</td>
+<td>Microsoft.PowerApps.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Publish-PowerApp</td>
+<td>Microsoft.PowerApps.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Remove-Flow</td>
+<td>Microsoft.PowerApps.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Remove-FlowOwnerRole</td>
+<td>Microsoft.PowerApps.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Remove-PowerApp</td>
+<td>Microsoft.PowerApps.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Remove-PowerAppConnection</td>
+<td>Microsoft.PowerApps.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Remove-PowerAppConnectionRoleAssignment</td>
+<td>Microsoft.PowerApps.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Remove-PowerAppConnector</td>
+<td>Microsoft.PowerApps.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Remove-PowerAppConnectorRoleAssignment</td>
+<td>Microsoft.PowerApps.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Remove-PowerAppRoleAssignment</td>
+<td>Microsoft.PowerApps.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Restore-PowerAppVersion</td>
+<td>Microsoft.PowerApps.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Set-FlowOwnerRole</td>
+<td>Microsoft.PowerApps.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Set-PowerAppConnectionRoleAssignment</td>
+<td>Microsoft.PowerApps.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Set-PowerAppConnectorRoleAssignment</td>
+<td>Microsoft.PowerApps.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Set-PowerAppDisplayName</td>
+<td>Microsoft.PowerApps.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Set-PowerAppRoleAssignment</td>
+<td>Microsoft.PowerApps.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Add-ConnectorToBusinessDataGroup</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Add-CustomConnectorToPolicy</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Add-PowerAppsAccount</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Clear-AdminPowerAppApisToBypassConsent</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Clear-AdminPowerAppAsFeatured</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Clear-AdminPowerAppAsHero</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Disable-AdminFlow</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Enable-AdminFlow</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-AdminDlpPolicy</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-AdminFlow</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-AdminFlowOwnerRole</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-AdminFlowUserDetails</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-AdminPowerApp</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-AdminPowerAppCdsDatabaseCurrencies</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-AdminPowerAppCdsDatabaseLanguages</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-AdminPowerAppConnection</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-AdminPowerAppConnectionReferences</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-AdminPowerAppConnectionRoleAssignment</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-AdminPowerAppConnector</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-AdminPowerAppConnectorRoleAssignment</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-AdminPowerAppEnvironment</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-AdminPowerAppEnvironmentLocations</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-AdminPowerAppEnvironmentRoleAssignment</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-AdminPowerAppRoleAssignment</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-AdminPowerAppsUserDetails</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-JwtToken</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-TenantDetailsFromGraph</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-UsersOrGroupsFromGraph</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>InvokeApi</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>New-AdminDlpPolicy</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>New-AdminPowerAppCdsDatabase</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>New-AdminPowerAppEnvironment</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Remove-AdminDlpPolicy</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Remove-AdminFlow</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Remove-AdminFlowApprovals</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Remove-AdminFlowOwnerRole</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Remove-AdminFlowUserDetails</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Remove-AdminPowerApp</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Remove-AdminPowerAppConnection</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Remove-AdminPowerAppConnectionRoleAssignment</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Remove-AdminPowerAppConnector</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Remove-AdminPowerAppConnectorRoleAssignment</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Remove-AdminPowerAppEnvironment</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Remove-AdminPowerAppEnvironmentRoleAssignment</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Remove-AdminPowerAppRoleAssignment</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Remove-ConnectorFromBusinessDataGroup</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Remove-CustomConnectorFromPolicy</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Remove-LegacyCDSDatabase</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Remove-PowerAppsAccount</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>ReplaceMacro</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Select-CurrentEnvironment</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Set-AdminDlpPolicy</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Set-AdminFlowOwnerRole</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Set-AdminPowerAppApisToBypassConsent</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Set-AdminPowerAppAsFeatured</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Set-AdminPowerAppAsHero</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Set-AdminPowerAppConnectionRoleAssignment</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Set-AdminPowerAppConnectorRoleAssignment</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Set-AdminPowerAppEnvironmentDisplayName</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Set-AdminPowerAppEnvironmentRoleAssignment</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Set-AdminPowerAppOwner</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Set-AdminPowerAppRoleAssignment</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Test-PowerAppsAccount</td>
+<td>Microsoft.PowerApps.Administration.PowerShell</td>
+<td></td>
+</tr>
+<tr>
+<td>Add-TeamUser</td>
+<td>MicrosoftTeams</td>
+<td><a href="../../cmd/graph/teams/teams-user-add/">graph teams user add</a></td>
+</tr>
+<tr>
+<td>Connect-MicrosoftTeams</td>
+<td>MicrosoftTeams</td>
+<td><a href="../../cmd/graph/login/">graph login</a></td>
+</tr>
+<tr>
+<td>Disconnect-MicrosoftTeams</td>
+<td>MicrosoftTeams</td>
+<td><a href="../../cmd/graph/logout/">graph logout</a></td>
+</tr>
+<tr>
+<td>Get-Team</td>
+<td>MicrosoftTeams</td>
+<td><a href="../../cmd/graph/teams/teams-list/">graph teams list</a></td>
+</tr>
+<tr>
+<td>Get-TeamChannel</td>
+<td>MicrosoftTeams</td>
+<td><a href="../../cmd/graph/teams/teams-channel-list/">graph teams channel list</a></td>
+</tr>
+<tr>
+<td>Get-TeamFunSettings</td>
+<td>MicrosoftTeams</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-TeamGuestSettings</td>
+<td>MicrosoftTeams</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-TeamHelp</td>
+<td>MicrosoftTeams</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-TeamMemberSettings</td>
+<td>MicrosoftTeams</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-TeamMessagingSettings</td>
+<td>MicrosoftTeams</td>
+<td></td>
+</tr>
+<tr>
+<td>Get-TeamUser</td>
+<td>MicrosoftTeams</td>
+<td><a href="../../cmd/graph/teams/teams-user-list/">graph teams user list</a></td>
+</tr>
+<tr>
+<td>New-Team</td>
+<td>MicrosoftTeams</td>
+<td></td>
+</tr>
+<tr>
+<td>New-TeamChannel</td>
+<td>MicrosoftTeams</td>
+<td><a href="../../cmd/graph/teams/teams-channel-add/">graph teams channel add</a></td>
+</tr>
+<tr>
+<td>Remove-Team</td>
+<td>MicrosoftTeams</td>
+<td></td>
+</tr>
+<tr>
+<td>Remove-TeamChannel</td>
+<td>MicrosoftTeams</td>
+<td></td>
+</tr>
+<tr>
+<td>Remove-TeamUser</td>
+<td>MicrosoftTeams</td>
+<td><a href="../../cmd/graph/teams/teams-user-remove/">graph teams user remove</a></td>
+</tr>
+<tr>
+<td>Set-Team</td>
+<td>MicrosoftTeams</td>
+<td></td>
+</tr>
+<tr>
+<td>Set-TeamChannel</td>
+<td>MicrosoftTeams</td>
+<td></td>
+</tr>
+<tr>
+<td>Set-TeamFunSettings</td>
+<td>MicrosoftTeams</td>
+<td></td>
+</tr>
+<tr>
+<td>Set-TeamGuestSettings</td>
+<td>MicrosoftTeams</td>
+<td></td>
+</tr>
+<tr>
+<td>Set-TeamMemberSettings</td>
+<td>MicrosoftTeams</td>
+<td></td>
+</tr>
+<tr>
+<td>Set-TeamMessagingSettings</td>
+<td>MicrosoftTeams</td>
+<td></td>
+</tr>
+<tr>
+<td>Set-TeamPicture</td>
+<td>MicrosoftTeams</td>
+<td></td>
+</tr>
 </tbody>
 </table>
                 
@@ -6765,7 +7596,6 @@
           Material for MkDocs</a>
       </div>
       
-        
   <div class="md-footer-social">
     <link rel="stylesheet" href="../../assets/fonts/font-awesome.css">
     
@@ -6777,14 +7607,13 @@
     
   </div>
 
-      
     </div>
   </div>
 </footer>
       
     </div>
     
-      <script src="../../assets/javascripts/application.a353778b.js"></script>
+      <script src="../../assets/javascripts/application.d9aa80ab.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:"../.."}})</script>
       
