@@ -134,6 +134,7 @@ export default {
   SITE_INPLACERECORDSMANAGEMENT_SET: `${prefix} site inplacerecordsmanagement set`,
   SITE_O365GROUP_SET: `${prefix} site o365group set`,
   SITE_SET: `${prefix} site set`,
+  SITE_TEAMIFY: `${prefix} site teamify`,
   SITEDESIGN_ADD: `${prefix} sitedesign add`,
   SITEDESIGN_APPLY: `${prefix} sitedesign apply`,
   SITEDESIGN_GET: `${prefix} sitedesign get`,
