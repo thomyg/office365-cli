@@ -8,4 +8,3 @@ export interface Tab {
   configuration: TeamsTabConfiguration;
   teamsApp: TeamsApp
 }
-

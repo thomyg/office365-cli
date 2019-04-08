@@ -9,7 +9,6 @@ import Utils from '../../../../Utils';
 import { Tab } from './Tab';
 import { GraphItemsListCommand } from '../GraphItemsListCommand';
 
-
 const vorpal: Vorpal = require('../../../../vorpal-init');
 
 interface CommandArgs {
@@ -17,29 +16,21 @@ interface CommandArgs {
 }
 
 interface Options extends GlobalOptions {
-  joined?: boolean;
   teamId: string;
   channelId: string;
 }
 
-class TabListCommand extends GraphItemsListCommand<Tab> {
+class GraphTeamsTabListCommand extends GraphItemsListCommand<Tab> {
   public get name(): string {
     return `${commands.TEAMS_TAB_LIST}`;
   }
 
   public get description(): string {
-    return 'Lists Tabs in a Microsoft Teams team.';
-  }
-
-  public getTelemetryProperties(args: CommandArgs): any {
-    const telemetryProps: any = super.getTelemetryProperties(args);
-    telemetryProps.joined = args.options.joined;
-    return telemetryProps;
+    return 'Lists tabs in the specified Microsoft Teams channel';
   }
 
   public commandAction(cmd: CommandInstance, args: CommandArgs, cb: () => void): void {
-
-    let endpoint: string = `${auth.service.resource}/V1.0/teams/${args.options.teamId}/channels/${args.options.channelId}/tabs?$expand=teamsApp`;
+    const endpoint: string = `${auth.service.resource}/v1.0/teams/${args.options.teamId}/channels/${encodeURIComponent(args.options.channelId)}/tabs?$expand=teamsApp`;
 
     this
       .getAllItems(endpoint, cmd, true)
@@ -48,10 +39,10 @@ class TabListCommand extends GraphItemsListCommand<Tab> {
           cmd.log(this.items);
         }
         else {
-          cmd.log(this.items.map(t => {
+          cmd.log(this.items.map((t: Tab) => {
             return {
-              id: t.id,   
-              displayName: t.displayName,                         
+              id: t.id,
+              displayName: t.displayName,
               teamsAppTabId: t.teamsApp.id,
             }
           }));
@@ -69,11 +60,11 @@ class TabListCommand extends GraphItemsListCommand<Tab> {
     const options: CommandOption[] = [
       {
         option: '-i, --teamId <teamId>',
-        description: 'The ID of the team to list the tab of'
+        description: 'The ID of the Microsoft Teams team where the channel is located'
       },
       {
         option: '-c, --channelId <channelId>',
-        description: 'The ID of the channel to list the tab of'
+        description: 'The ID of the channel for which to list tabs'
       }
     ];
 
@@ -108,30 +99,24 @@ class TabListCommand extends GraphItemsListCommand<Tab> {
         
   Remarks:
 
-    To list available tabs in a specific Microsoft Teams team, you have to first log in to
-    the Microsoft Graph using the ${chalk.blue(commands.LOGIN)} command,
+    To list available tabs in a specific Microsoft Teams channel, you have to
+    first log in to the Microsoft Graph using the ${chalk.blue(commands.LOGIN)} command,
     eg. ${chalk.grey(`${config.delimiter} ${commands.LOGIN}`)}.
 
-    You can only see the tab list of a team you are a member of.
+    You can only retrieve tabs for teams of which you are a member.
 
-    The tabs Conversations and Files are present in every team and therefor not provided as a
-    tab in the response from the graph call. 
+    Tabs 'Conversations' and 'Files' are present in every team and therefore not
+    included in the list of available tabs.
 
   Examples:
   
-    List all tabs in a Microsoft Teams team
-      ${chalk.grey(config.delimiter)} ${this.name} --teamId <teamId> --channelId <channelId>
+    List all tabs in a Microsoft Teams channel
+      ${chalk.grey(config.delimiter)} ${this.name} --teamId 00000000-0000-0000-0000-000000000000 --channelId 19:00000000000000000000000000000000@thread.skype
 
-    Include the all the values from the tab configuration and associated teams app
-      ${chalk.grey(config.delimiter)} ${this.name} --teamId <teamId> --channelId <channelId> --output json
-
-  Details:
-    
-    The command uses Microsoft Graph to retrive the tab information. More details on the underlying
-    graph endpoint can be found at:
-    https://docs.microsoft.com/en-us/graph/api/teamstab-list?view=graph-rest-1.0
+    Include all the values from the tab configuration and associated teams app
+      ${chalk.grey(config.delimiter)} ${this.name} --teamId 00000000-0000-0000-0000-000000000000 --channelId 19:00000000000000000000000000000000@thread.skype --output json
 `);
   }
 }
 
-module.exports = new TabListCommand();
+module.exports = new GraphTeamsTabListCommand();
