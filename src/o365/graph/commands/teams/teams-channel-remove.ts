@@ -7,7 +7,7 @@ import {
 } from '../../../../Command';
 import Utils from '../../../../Utils';
 import * as request from 'request-promise-native';
-import GraphCommand from '../../GraphCommand';
+import { GraphTeamsBaseCommand } from './teams-base';
 import { Channel } from './Channel';
 
 const vorpal: Vorpal = require('../../../../vorpal-init');
@@ -23,7 +23,7 @@ interface Options extends GlobalOptions {
   confirm?: boolean;
 }
 
-class GraphTeamsChannelRemoveCommand extends GraphCommand {
+class GraphTeamsChannelRemoveCommand extends GraphTeamsBaseCommand {
   public get name(): string {
     return `${commands.TEAMS_CHANNEL_REMOVE}`;
   }
@@ -131,6 +131,7 @@ class GraphTeamsChannelRemoveCommand extends GraphCommand {
             cmd.log('');
           }
 
+          
           return request.delete(requestOptions);
         })
 
@@ -146,10 +147,16 @@ class GraphTeamsChannelRemoveCommand extends GraphCommand {
 
     if (args.options.confirm) {
       if (args.options.channelId) {
-        removeTeamByChannelId();
+        //removeTeamByChannelId();
       }
       if (args.options.channelName) {
-        removeTeamByChannelName();
+        if (this.debug) {
+          cmd.log('Checking getChannelIdByname...');
+          cmd.log(this.getChannelIdByChannelName(args.options.channelName, cmd));
+          cmd.log('');
+        }
+        
+       // removeTeamByChannelName();
       }
     }
     else {
@@ -164,10 +171,24 @@ class GraphTeamsChannelRemoveCommand extends GraphCommand {
         }
         else {
           if (args.options.channelId) {
+           if( 3 > 5)
+           {
             removeTeamByChannelId();
+           }
           }
           if (args.options.channelName) {
+            if (this.debug) {
+              cmd.log('Checking getChannelIdByname...');
+              this.teamId = args.options.teamId;
+              let dummy: string = this.getChannelIdByChannelName(args.options.channelName, cmd);
+              cmd.log('dummy');
+              cmd.log(dummy);
+              cmd.log('');
+            }
+            if (3 > 5)
+            {
             removeTeamByChannelName();
+            }
           }
         }
       });
