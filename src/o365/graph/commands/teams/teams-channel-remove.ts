@@ -8,7 +8,7 @@ import {
 import Utils from '../../../../Utils';
 import * as request from 'request-promise-native';
 import { GraphTeamsBaseCommand } from './teams-base';
-import { Channel } from './Channel';
+
 
 const vorpal: Vorpal = require('../../../../vorpal-init');
 
@@ -40,7 +40,7 @@ class GraphTeamsChannelRemoveCommand extends GraphTeamsBaseCommand {
 
   public commandAction(cmd: CommandInstance, args: CommandArgs, cb: () => void): void {
     const providedChannelId: string = (typeof args.options.channelId !== 'undefined') ? args.options.channelId : "" as string
-    const removeTeamByChannelId: () => void = (): void => {
+    const removeChannelById: () => void = (): void => {
       auth
         .ensureAccessToken(auth.service.resource, cmd, this.debug)
         .then((): request.RequestPromise => {
@@ -72,53 +72,19 @@ class GraphTeamsChannelRemoveCommand extends GraphTeamsBaseCommand {
         }, (err: any) => this.handleRejectedODataJsonPromise(err, cmd, cb));
     };
 
-    const removeTeamByChannelName: () => void = (): void => {
+    const removeChannelByName: () => void = (): void => {
       auth
         .ensureAccessToken(auth.service.resource, cmd, this.debug)
-        .then((): request.RequestPromise => {
-          const requestOptions: any = {
-            url: `${auth.service.resource}/v1.0/teams/${encodeURIComponent(args.options.teamId)}/channels/`,
-            headers: Utils.getRequestHeaders({
-              authorization: `Bearer ${auth.service.accessToken}`,
-              accept: 'application/json;odata.metadata=none'
-            }),
-            json: true
-          };
-
-          if (this.debug) {
-            cmd.log('Executing web request...');
-            cmd.log(requestOptions);
-            cmd.log('');
+        .then((): Promise<Object> => {
+          let channelName: string = "";
+          if (args.options.channelName) {
+            channelName = args.options.channelName;
           }
-
-          return request.get(requestOptions);
+          return this.getChannelIdByChannelName(channelName, cmd);
         })
-
         .then((res: any): Promise<void> | request.RequestPromise => {
-          if (this.debug) {
-            cmd.log('Response:')
-            cmd.log(res);
-            cmd.log('');
-          }
-
-          const channelToDelete: Channel = (res.value.filter((i: any) => i.displayName === args.options.channelName));
-          const channelToDeleteId: string = channelToDelete.id;
-          if (this.debug) {
-            cmd.log('channelName:')
-            cmd.log(args.options.channelName)
-            cmd.log('channelToDelete:')
-            cmd.log(channelToDelete)
-            cmd.log('channelToDelete.id:')
-            cmd.log(channelToDelete.id)
-            cmd.log('channelToDelete.id as string:')
-            cmd.log(channelToDeleteId)
-          }
-          //Todo: output if name is incorrect
-
-          //const endpoint: string = `${auth.service.resource}/v1.0/teams/${encodeURIComponent(args.options.teamId)}/channels/${encodeURIComponent(channelIdToDelete)}`;
-
           const requestOptions: any = {
-            url: `${auth.service.resource}/v1.0/teams/${encodeURIComponent(args.options.teamId)}/channels/${encodeURIComponent(channelToDelete.id)}`,
+            url: `${auth.service.resource}/v1.0/teams/${encodeURIComponent(args.options.teamId)}/channels/${encodeURIComponent(res)}`,
             headers: Utils.getRequestHeaders({
               authorization: `Bearer ${auth.service.accessToken}`,
               'accept': 'application/json;odata.metadata=none'
@@ -131,7 +97,6 @@ class GraphTeamsChannelRemoveCommand extends GraphTeamsBaseCommand {
             cmd.log('');
           }
 
-          
           return request.delete(requestOptions);
         })
 
@@ -150,13 +115,7 @@ class GraphTeamsChannelRemoveCommand extends GraphTeamsBaseCommand {
         //removeTeamByChannelId();
       }
       if (args.options.channelName) {
-        if (this.debug) {
-          cmd.log('Checking getChannelIdByname...');
-          cmd.log(this.getChannelIdByChannelName(args.options.channelName, cmd));
-          cmd.log('');
-        }
-        
-       // removeTeamByChannelName();
+        removeChannelByName();
       }
     }
     else {
@@ -171,24 +130,13 @@ class GraphTeamsChannelRemoveCommand extends GraphTeamsBaseCommand {
         }
         else {
           if (args.options.channelId) {
-           if( 3 > 5)
-           {
-            removeTeamByChannelId();
-           }
+            if (3 > 5) {
+              removeChannelById();
+            }
           }
           if (args.options.channelName) {
-            if (this.debug) {
-              cmd.log('Checking getChannelIdByname...');
-              this.teamId = args.options.teamId;
-              let dummy: string = this.getChannelIdByChannelName(args.options.channelName, cmd);
-              cmd.log('dummy');
-              cmd.log(dummy);
-              cmd.log('');
-            }
-            if (3 > 5)
-            {
-            removeTeamByChannelName();
-            }
+            this.teamId = args.options.teamId;
+            removeChannelByName();
           }
         }
       });
@@ -206,7 +154,7 @@ class GraphTeamsChannelRemoveCommand extends GraphTeamsBaseCommand {
         description: 'The ID of the Teams channel to remove'
       },
       {
-        option: '-n, --channelName [channelId]',
+        option: '-n, --channelName [channelName]',
         description: 'The name of the Teams channel to remove'
       },
       {
@@ -237,11 +185,11 @@ class GraphTeamsChannelRemoveCommand extends GraphTeamsBaseCommand {
         return `${args.options.teamId} is not a valid GUID`;
       }
 
-      // if(args.options.channelId){
-      //   if (!Utils.isValidChannelId(args.options.channelId)) {
-      //     return `${args.options.channelName} is not a valid Teams channelId`;
-      //   }
-      // }
+      if(args.options.channelId){
+        if (!this.isValidChannelId(args.options.channelId)) {
+          return `${args.options.channelName} is not a valid Teams channelId`;
+        }
+      }
 
       return true;
     };

@@ -67,3 +67,6 @@ commands.json
 
 # VS env folder
 .vs/
+.vscode/tasks.json
+.gitignore
+.gitignore

@@ -4,7 +4,7 @@ import Utils from '../../../../Utils';
 import * as request from 'request-promise-native';
 import auth from '../../GraphAuth';
 import GraphCommand from '../../GraphCommand';
-import {Channel} from './Channel';
+
 
 
 export abstract class GraphTeamsBaseCommand extends GraphCommand {
@@ -14,7 +14,7 @@ export abstract class GraphTeamsBaseCommand extends GraphCommand {
    */
   protected teamId: string;
 
-  /* istanbul ignore next */
+  
   constructor() {
     super();
     this.teamId = '';
@@ -22,48 +22,38 @@ export abstract class GraphTeamsBaseCommand extends GraphCommand {
 
 
   /**
-   * Detects if the string in question is a valid Teams ChannelId
-   * by the following RegEx ^19:\[0-9a-zA-Z]+@thread.skype$/i
+   * Gets the channelId by providing the channelName    
    * @param channelName the string representing a Teams channel name
    */
-  protected getChannelIdByChannelName(channelName: string, cmd: CommandInstance): string {
+  protected getChannelIdByChannelName(channelName: string, cmd: CommandInstance): Promise<Object> {
+    const requestOptions: any = {
+      url: `${auth.service.resource}/v1.0/teams/${encodeURIComponent(this.teamId)}/channels/?$filter=displayName eq '${encodeURIComponent(channelName)}'`,
+      headers: Utils.getRequestHeaders({
+        authorization: `Bearer ${auth.service.accessToken}`,
+        accept: 'application/json;odata.metadata=none'
+      }),
+      json: true
+    };
 
-    let channelToDelete : Channel;
-    let rv : string = "";
+    if (this.debug) {
+      cmd.log('Request:');
+      cmd.log(JSON.stringify(requestOptions));
+      cmd.log('');
+    }
 
-    auth
-      .ensureAccessToken(auth.service.resource, cmd, this.debug)
-      .then((): request.RequestPromise => {
-        const requestOptions: any = {
-          url: `${auth.service.resource}/v1.0/teams/${encodeURIComponent(this.teamId)}/channels/?$filter=displayName eq '${encodeURIComponent(channelName)}' `,
-          headers: Utils.getRequestHeaders({
-            authorization: `Bearer ${auth.service.accessToken}`,
-            accept: 'application/json;odata.metadata=none'
-          }),
-          json: true
-        };
-
+    return new Promise<Object>((resolve: any, reject: any): void => {
+      request.get(requestOptions).then((res: any) => {
         if (this.debug) {
-          cmd.log('Executing web request...');
-          cmd.log(requestOptions);
+          cmd.log('Response:');
+          cmd.log(JSON.stringify(res));
           cmd.log('');
         }
 
-        return request.get(requestOptions);
-      })
-      .then((res: any): void => {
-        if (this.debug) {
-          cmd.log('Response:')
-          cmd.log(res);
-          cmd.log('');
-        }
+        return resolve(res.value[0].id);
 
-        channelToDelete = res.value[0];
-        rv = channelToDelete.id;
-      })
-
-    
-    return rv;
+        reject('Cannot proceed. Error during getting channelId'); // this is not supposed to happen
+      }, (err: any): void => { reject(err); })
+    });
 
   }
 
@@ -73,7 +63,7 @@ export abstract class GraphTeamsBaseCommand extends GraphCommand {
    * by the following RegEx ^19:\[0-9a-zA-Z]+@thread.skype$/i
    * @param channelId the string representing a Teams ChannelId
    */
-  public static isValidTeamsChannelId(channelId: string): boolean {
+  protected isValidChannelId(channelId: string): boolean {
     const guidRegEx: RegExp = new RegExp(/^19:[0-9a-zA-Z]+@thread.skype$/i);
 
     return guidRegEx.test(channelId);
