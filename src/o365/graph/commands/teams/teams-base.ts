@@ -14,18 +14,17 @@ export abstract class GraphTeamsBaseCommand extends GraphCommand {
    */
   protected teamId: string;
 
-  
+
   constructor() {
     super();
     this.teamId = '';
   }
 
-
   /**
    * Gets the channelId by providing the channelName    
    * @param channelName the string representing a Teams channel name
    */
-  protected getChannelIdByChannelName(channelName: string, cmd: CommandInstance): Promise<Object> {
+  protected getChannelIdByChannelName(channelName: string, cmd: CommandInstance): Promise<string> {
     const requestOptions: any = {
       url: `${auth.service.resource}/v1.0/teams/${encodeURIComponent(this.teamId)}/channels/?$filter=displayName eq '${encodeURIComponent(channelName)}'`,
       headers: Utils.getRequestHeaders({
@@ -41,15 +40,19 @@ export abstract class GraphTeamsBaseCommand extends GraphCommand {
       cmd.log('');
     }
 
-    return new Promise<Object>((resolve: any, reject: any): void => {
+    return new Promise<string>((resolve: any, reject: any): void => {
       request.get(requestOptions).then((res: any) => {
         if (this.debug) {
           cmd.log('Response:');
           cmd.log(JSON.stringify(res));
           cmd.log('');
         }
-
+        if(!res.value === undefined){
         return resolve(res.value[0].id);
+        }
+        else {
+          return reject(`Cannot proceed. No channel with channelName:'${encodeURIComponent(channelName)}' present`);
+        }
 
         reject('Cannot proceed. Error during getting channelId'); // this is not supposed to happen
       }, (err: any): void => { reject(err); })

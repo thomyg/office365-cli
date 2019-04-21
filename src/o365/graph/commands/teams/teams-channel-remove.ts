@@ -39,84 +39,37 @@ class GraphTeamsChannelRemoveCommand extends GraphTeamsBaseCommand {
   }
 
   public commandAction(cmd: CommandInstance, args: CommandArgs, cb: () => void): void {
-    const providedChannelId: string = (typeof args.options.channelId !== 'undefined') ? args.options.channelId : "" as string
-    const removeChannelById: () => void = (): void => {
-      auth
-        .ensureAccessToken(auth.service.resource, cmd, this.debug)
-        .then((): request.RequestPromise => {
-          const requestOptions: any = {
-            url: `${auth.service.resource}/v1.0/teams/${encodeURIComponent(args.options.teamId)}/channels/${encodeURIComponent(providedChannelId)}`,
-            headers: Utils.getRequestHeaders({
-              authorization: `Bearer ${auth.service.accessToken}`,
-              accept: 'application/json;odata.metadata=none'
-            }),
-            json: true
-          };
-
-          if (this.debug) {
-            cmd.log('Executing web request...');
-            cmd.log(requestOptions);
-            cmd.log('');
-          }
-
-          return request.delete(requestOptions);
-        })
-
-
-        .then((): void => {
-          if (this.verbose) {
-            cmd.log(vorpal.chalk.green('DONE'));
-          }
-
-          cb();
-        }, (err: any) => this.handleRejectedODataJsonPromise(err, cmd, cb));
-    };
-
-    const removeChannelByName: () => void = (): void => {
-      auth
-        .ensureAccessToken(auth.service.resource, cmd, this.debug)
-        .then((): Promise<Object> => {
-          let channelName: string = "";
-          if (args.options.channelName) {
-            channelName = args.options.channelName;
-          }
-          return this.getChannelIdByChannelName(channelName, cmd);
-        })
-        .then((res: any): Promise<void> | request.RequestPromise => {
-          const requestOptions: any = {
-            url: `${auth.service.resource}/v1.0/teams/${encodeURIComponent(args.options.teamId)}/channels/${encodeURIComponent(res)}`,
-            headers: Utils.getRequestHeaders({
-              authorization: `Bearer ${auth.service.accessToken}`,
-              'accept': 'application/json;odata.metadata=none'
-            }),
-          };
-
-          if (this.debug) {
-            cmd.log('Executing web request...');
-            cmd.log(requestOptions);
-            cmd.log('');
-          }
-
-          return request.delete(requestOptions);
-        })
-
-
-        .then((): void => {
-          if (this.verbose) {
-            cmd.log(vorpal.chalk.green('DONE'));
-          }
-
-          cb();
-        }, (err: any) => this.handleRejectedODataJsonPromise(err, cmd, cb));
-    };
+    let error: boolean = true;
+    this.teamId = args.options.teamId;
 
     if (args.options.confirm) {
+
       if (args.options.channelId) {
-        //removeTeamByChannelId();
+        this.removeChannelById(args.options.channelId, cmd);
+        error = false;
       }
+
       if (args.options.channelName) {
-        removeChannelByName();
+
+        this.getChannelIdByChannelName(args.options.channelName, cmd)
+          .then((res: string): void => {
+            if (this.verbose) {
+              cmd.log(`Channel id is :${encodeURIComponent(res)}`);
+            }
+            this.removeChannelById(res, cmd);
+            error = false;
+          }, (res: Error): void => {
+            this.handleRejectedODataJsonPromise(res, cmd, cb)
+          }
+
+          );
       }
+
+      if (this.verbose && !error) {
+        cmd.log(vorpal.chalk.green('DONE'));
+      }
+
+      cb();
     }
     else {
       cmd.prompt({
@@ -130,18 +83,61 @@ class GraphTeamsChannelRemoveCommand extends GraphTeamsBaseCommand {
         }
         else {
           if (args.options.channelId) {
-            if (3 > 5) {
-              removeChannelById();
-            }
+            this.removeChannelById(args.options.channelId, cmd);
+            error = false;
           }
           if (args.options.channelName) {
-            this.teamId = args.options.teamId;
-            removeChannelByName();
+            this.getChannelIdByChannelName(args.options.channelName, cmd)
+              .then((res: string): void => {
+                if (this.verbose) {
+                  cmd.log(`Channel id is :${encodeURIComponent(res)}`);
+                }
+                this.removeChannelById(res, cmd);
+                error = false;
+              }, (res: Error): void => {
+                this.handleRejectedODataJsonPromise(res, cmd, cb)
+              }
+
+              );
           }
+          if (this.verbose && !error) {
+            cmd.log(vorpal.chalk.green('DONE'));
+          }
+
+          cb();
         }
       });
     }
   }
+
+  protected removeChannelById(channelId: string, cmd: CommandInstance): void {
+    auth.ensureAccessToken(auth.service.resource, cmd, this.debug)
+      .then((): request.RequestPromise => {
+        const requestOptions: any = {
+          url: `${auth.service.resource}/v1.0/teams/${encodeURIComponent(this.teamId)}/channels/${encodeURIComponent(channelId)}`,
+          headers: Utils.getRequestHeaders({
+            authorization: `Bearer ${auth.service.accessToken}`,
+            accept: 'application/json;odata.metadata=none'
+          })
+        };
+
+        if (this.debug) {
+          cmd.log('Executing web request...');
+          cmd.log(requestOptions);
+          cmd.log('');
+        }
+
+        return request.delete(requestOptions);
+      })
+      .then((res: string): void => {
+        if (this.debug) {
+          cmd.log('Response:');
+          cmd.log(res);
+          cmd.log('');
+        }
+      })
+  }
+
 
   public options(): CommandOption[] {
     const options: CommandOption[] = [
@@ -185,7 +181,7 @@ class GraphTeamsChannelRemoveCommand extends GraphTeamsBaseCommand {
         return `${args.options.teamId} is not a valid GUID`;
       }
 
-      if(args.options.channelId){
+      if (args.options.channelId) {
         if (!this.isValidChannelId(args.options.channelId)) {
           return `${args.options.channelName} is not a valid Teams channelId`;
         }
